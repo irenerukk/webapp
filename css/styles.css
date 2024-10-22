@@ -1,0 +1,29 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Tipografía sin serifas */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Color de fondo suave */
+    color: #333; /* Color de texto oscuro */
+}
+
+/* Encabezados */
+h1, h2, h3, h4 {
+    color: #2c3e50; /* Color azul oscuro */
+    margin-bottom: 20px;
+}
+/* Encabezados */
+h1, h2, h3, h4 {
+    color: #2c3e50; /* Color azul oscuro */
+    margin-bottom: 20px;
+}
+
+/* Estilo de enlaces */
+a {
+    color: #3498db; /* Color azul brillante */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayar al pasar el cursor */
+}
