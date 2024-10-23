@@ -5,35 +5,60 @@ body {
     padding: 20;
     background-color: #83a3d0; /* Color de fondo suave */
     color: #333; /* Color de texto oscuro */
+    
+    header {
+        background-color: #83a3d0; /* Color de fondo del footer */
+        color: rgb(34, 44, 99); /* Color del texto */
+        text-align: left; /* Centra el texto */
+        font-size: 40px;
+    }
+    footer {
+        background-color: #ffffff; /* Color de fondo del footer */
+        color: rgb(34, 44, 99); /* Color del texto */
+        text-align: left; /* Centra el texto */
+        font-size: 40px;
+        margin: 0; /* Elimina los márgenes del body */
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+    } 
 }
-
 /* Encabezados */
 h1 {
-    color: #2c3e50; /* Color azul oscuro */
-    font-size: 40px;
+    color: #272727; /* Color azul oscuro */
+    font-size: 55px;
     margin-bottom: 5px;
     margin: 5;
     text-align: left;
 }
 /* Encabezados */
-h2, h3, h4 {
+h2,h3,h4, h5, h6 ,h7  {
     color: #2c3e50; /* Color azul oscuro */
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 2px;
     margin: 5;
     text-align: left;
 }
-
+p  {
+    color: #2c3e50; /* Color azul oscuro */
+    margin-bottom: 20px;
+    font-size: 18px;
+    margin-bottom: 2px;
+    margin: 5;
+    text-align: left;
+}
 /* Estilo de enlaces */
 a {
-    color: #124465; /* Color azul brillante */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #122f52; /* Color azul brillante */
     text-decoration: none;
     margin-bottom: 20px;
     margin: 5;
-    text-size-adjust: 40px;
-    text-align: left;
+    font-size: 25px;
 
+    text-align: left;
+}
 a:hover {
     text-decoration: underline; /* Subrayar al pasar el cursor */
 }
@@ -47,5 +72,4 @@ img {
     height: auto; 
     border-radius: 8px; 
 }
-
 
