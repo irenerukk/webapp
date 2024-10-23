@@ -1,29 +1,51 @@
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif; /* Tipografía sin serifas */
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4; /* Color de fondo suave */
+    margin: 20;
+    padding: 20;
+    background-color: #83a3d0; /* Color de fondo suave */
     color: #333; /* Color de texto oscuro */
 }
 
 /* Encabezados */
-h1, h2, h3, h4 {
+h1 {
     color: #2c3e50; /* Color azul oscuro */
-    margin-bottom: 20px;
+    font-size: 40px;
+    margin-bottom: 5px;
+    margin: 5;
+    text-align: left;
 }
 /* Encabezados */
-h1, h2, h3, h4 {
+h2, h3, h4 {
     color: #2c3e50; /* Color azul oscuro */
     margin-bottom: 20px;
+    font-size: 20px;
+    margin-bottom: 2px;
+    margin: 5;
+    text-align: left;
 }
 
 /* Estilo de enlaces */
 a {
-    color: #3498db; /* Color azul brillante */
+    color: #124465; /* Color azul brillante */
     text-decoration: none;
-}
+    margin-bottom: 20px;
+    margin: 5;
+    text-size-adjust: 40px;
+    text-align: left;
 
 a:hover {
     text-decoration: underline; /* Subrayar al pasar el cursor */
 }
+
+br {
+    color: #102b46;
+}
+
+img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+}
+
+
