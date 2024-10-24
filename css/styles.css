@@ -54,8 +54,9 @@ a {
     color: #122f52; /* Color azul brillante */
     text-decoration: none;
     margin-bottom: 20px;
+    font-size: 30px;
     margin: 5;
-    font-size: 25px;
+    font-size: 30px;
 
     text-align: left;
 }
