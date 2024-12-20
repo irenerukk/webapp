@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/portfolio.css" />
+    <style>
+      /* Contenedor de la imagen */
+      .image-container {
+        position: relative;
+        display: inline-block;
+        width: 300px; /* Ajusta el tamaño según sea necesario */
+        height: auto;
+      }
+
+      /* Imagen */
+      .image-container img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      /* Capa gris oculta por defecto */
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Capa gris con opacidad */
+        display: none; /* Oculto inicialmente */
+      }
+
+      /* Mostrar la capa gris */
+      .image-container.clicked .overlay {
+        display: block; /* Muestra la capa gris al hacer clic */
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <nav>
+        <ul class="nav-list">
+          <li>
+            <img
+              src="Assets/portfolio/blackstar.svg"
+              alt="Logo"
+              width="20em"
+              height="20em"
+            />
+            <a> <strong> About Me/ </strong> Sobre mí misma</a>
+          </li>
+
+          <li>
+            <img
+              src="Assets/portfolio/whitestar.svg"
+              alt="Logo"
+              width="20em"
+              height="20em"
+            />
+            <a> <strong> My work/ </strong> Mis proyectos</a>
+          </li>
+          <li><a href="#contact">Contact Me / Contacta conmigo</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about" class="about">
+        <img
+          src="Assets/portfolio/yo.jpeg"
+          alt="Irene Casenave"
+          class="profile-image"
+        />
+        <div class="about-text">
+          <h1 style="margin-bottom: 5px">My name is</h1>
+          <span class="highlight" style="font-size: 35px">Irene Casenave</span>
+          <br />
+          <br />
+          <h3 style="line-height: 20px">
+            Siempre tuve una visión muy artística de la vida donde expresarme a
+            mi manera era lo más natural...
+          </h3>
+        </div>
+        <section id="work" class="work">
+          <strong style="display: block; margin-bottom: 0.1em; font-size: 2em;">
+            My Work /
+          </strong>
+          <p style="margin-top: 0; font-size: 2em;">Mis proyectos</p>
+        
+          <div class="projects-grid">
+            <!-- Proyecto 1 -->
+            <div class="project-box">
+              <a href="slydin.html">
+                <img
+                  src="Assets/portfolio/slydin2.png"
+                  alt="Slydin"
+                  style="max-width: 110%; height: auto;"
+                />
+              </a>
+            </div>
+        
+            <!-- Proyecto 2 -->
+            <div class="project-box">
+              <a href="zara.html">
+                <img
+                  src="Assets/portfolio/zara.png"
+                  alt="Zara"
+                  style="max-width: 110%; height: auto;"
+                />
+              </a>
+            </div>
+          </div>
+        </section>
+        
+        <section id="contact" class="contact">
+          <h2 style="font-size: 2em; margin-bottom: 1em;">Contact Me / Contacta conmigo</h2>
+          <div class="contact-info">
+            <p><strong>RRSS:</strong> irenecasenave</p>
+            <p><strong>Email:</strong> <a href="mailto:irenerukis@gmail.com">irenerukis@gmail.com</a></p>
+          </div>
+        </section>
+    
+    <footer class="footer">
+      <p>© 2024 irenecasenave</p>
+    </footer>
+  </body>
+</html>
