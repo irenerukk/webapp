@@ -36,19 +36,24 @@ h4 {
 .header {
   background: #ffffff;
   padding: 20px 10%;
+  display: flex; /* Activa Flexbox */
+  align-items: center;
 }
 
 .nav-list {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .nav-list li {
-  margin: 0 15px;
+  margin: 0 20px;
 }
 
 .nav-list a {
   font-weight: bold;
+  font-size: 15px;
+  align-items: center;
 }
 
 .about {
@@ -65,7 +70,7 @@ h4 {
 }
 
 .about-text {
-  max-width: 600px;
+  max-width: 380px;
 }
 
 .highlight {
@@ -81,15 +86,62 @@ h4 {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 30px;
   margin-top: 10px;
 }
 
 .project-box {
   background: #ffffff;
   padding: 10px;
-  text-align: center;
+  height: 50px; /* Ajustamos el tamaño de las cajas de proyectos */
+  width: 50%; /* Hacemos que ocupe todo el ancho disponible */
+  text-align: left;
   font-weight: bold;
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Agregamos sombra */
+  overflow: hidden; /* Evitar que la imagen se desborde */
+}
+
+.image-container {
+  position: relative;
+  width: 110%;
+  height: 110%;
+  overflow: hidden; /* Es importante para evitar que la imagen sobresalga */
+}
+
+/* Imagen del Proyecto */
+.project-image {
+  width: 40%;
+  height: 30%;
+  object-fit: cover; /* Mantiene la imagen en su proporción */
+  transition: transform 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 91%;
+  height: 70%;
+  background-color: rgba(0, 0, 0, 0.5); /* Capa gris con opacidad */
+  opacity: 0; /* Inicialmente no visible */
+  transition: opacity 0.3s ease; /* Transición suave */
+}
+
+/* Mostrar overlay al hacer hover */
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+/* Efecto Hover de la Imagen */
+.image-container:hover .project-image {
+  transform: scale(1.05); /* La imagen se agranda ligeramente al hacer hover */
+}
+
+/* Cambio de color al hacer hover */
+.button:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
 }
 
 .contact {
@@ -101,10 +153,15 @@ h4 {
 .contact-info p {
   margin: 10px 0;
 }
-
+.full-width-image {
+  width: 100%; /* Hace que la imagen ocupe todo el ancho de la pantalla */
+  height: auto; /* Mantiene la proporción original de la imagen */
+  display: block; /* Evita un pequeño espacio debajo de la imagen causado por el comportamiento inline */
+}
 .footer {
   background: #333;
   color: #fff;
   text-align: center;
   padding: 10px;
+  width: auto;
 }
