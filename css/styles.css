@@ -1,96 +1,97 @@
 body {
-   
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Tipografía sin serifas */
-    line-height: 1.6;
-    margin: 20;
-    padding: 20;
-    background-color: #83a3d0; /* Color de fondo suave */
-    color: #333; /* Color de texto oscuro */
-    
-    header {
-        background-color: #83a3d0; /* Color de fondo del footer */
-        color: rgb(34, 44, 99); /* Color del texto */
-        text-align: left; /* Centra el texto */
-        font-size: 40px;
-    }
-    footer {
-        background-color: #ffffff; /* Color de fondo del footer */
-        color: rgb(34, 44, 99); /* Color del texto */
-        text-align: left; /* Centra el texto */
-        font-size: 40px;
-        margin: 0; /* Elimina los márgenes del body */
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-    } 
+  font-family: "Helvetica Neue", Arial, sans-serif; /* Tipografía sin serifas */
+  line-height: 1.6;
+  margin: 20;
+  padding: 20;
+  background-color: #83a3d0; /* Color de fondo suave */
+  color: #333; /* Color de texto oscuro */
+
+  header {
+    background-color: #83a3d0; /* Color de fondo del footer */
+    color: rgb(34, 44, 99); /* Color del texto */
+    text-align: left; /* Centra el texto */
+    font-size: 40px;
+  }
+  footer {
+    background-color: #ffffff; /* Color de fondo del footer */
+    color: rgb(34, 44, 99); /* Color del texto */
+    text-align: left; /* Centra el texto */
+    font-size: 40px;
+    margin: 0; /* Elimina los márgenes del body */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
 }
 /* Encabezados */
 h1 {
-    color: #272727; /* Color azul oscuro */
-    font-size: 55px;
-    margin-bottom: 5px;
-    margin: 5;
-    text-align: left;
+  color: #272727; /* Color azul oscuro */
+  font-size: 55px;
+  margin-bottom: 5px;
+  margin: 5;
+  text-align: left;
 }
 
 h2 {
-    color: #ffffff; /* Color azul oscuro */
-    font-size: 80px;
-    margin-bottom: 5px;
-    margin: 5;
-    text-align: center;
+  color: #ffffff; /* Color azul oscuro */
+  font-size: 80px;
+  margin-bottom: 5px;
+  margin: 5;
+  text-align: center;
 }
 
 /* Encabezados */
-h3,h4, h6 ,h7  {
-    color: #2c3e50; /* Color azul oscuro */
-    margin-bottom: 20px;
-    font-size: 18px;
-    margin-bottom: 2px;
-    margin: 5;
-    text-align: left;
+h3,
+h4,
+h6,
+h7 {
+  color: #2c3e50; /* Color azul oscuro */
+  margin-bottom: 20px;
+  font-size: 18px;
+  margin-bottom: 2px;
+  margin: 5;
+  text-align: left;
 }
-p  {
-    color: #2c3e50; /* Color azul oscuro */
-    margin-bottom: 20px;
-    font-size: 18px;
-    margin-bottom: 2px;
-    margin: 5;
-    text-align: left;
+p {
+  color: #2c3e50; /* Color azul oscuro */
+  margin-bottom: 20px;
+  font-size: 18px;
+  margin-bottom: 2px;
+  margin: 5;
+  text-align: left;
 }
 /* Estilo de enlaces */
 a {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    color: #122f52; /* Color azul brillante */
-    text-decoration: none;
-    margin-bottom: 20px;
-    font-size: 30px;
-    margin: 5;
-    font-size: 30px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #122f52; /* Color azul brillante */
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-size: 30px;
+  margin: 5;
+  font-size: 30px;
 
-    text-align: left;
+  text-align: left;
 }
 a:hover {
-    text-decoration: underline; /* Subrayar al pasar el cursor */
+  text-decoration: underline; /* Subrayar al pasar el cursor */
 }
 
 br {
-    color: #102b46;
+  color: #102b46;
 }
 h5 {
-    color: #ffffff; /* Color azul oscuro */
-    margin-bottom: 20px;
-    font-size: 30px;
-    margin-bottom: 2px;
-    margin: 5;
-    text-align: center;
+  color: #ffffff; /* Color azul oscuro */
+  margin-bottom: 20px;
+  font-size: 30px;
+  margin-bottom: 2px;
+  margin: 5;
+  text-align: center;
   padding-bottom: 0px;
   line-height: 1em;
 }
 
 img {
-    max-width: 100%; 
-    height: auto; 
-    border-radius: 8px; 
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
-
