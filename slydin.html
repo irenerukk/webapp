@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/portfolio.css" />
+    <style>
+      /* Contenedor del texto */
+      .text-container {
+        position: relative;
+        width: 200%; /* Ancho del contenedor */
+        letter-spacing: -1.5em;
+        overflow: hidden; /* Oculta cualquier parte del texto que salga del contenedor */
+        height: 400px; /* Alto del contenedor */
+        background-color: #ffffff; /* Color de fondo opcional */
+        display: flex;
+        align-items: center;
+      }
+
+      /* Texto animado */
+      .animated-text {
+        position: absolute;
+        white-space: nowrap; /* Evita que el texto haga saltos de línea */
+        font-size: 20em;
+        color: #000000;
+        animation: slideIn 15s linear infinite; /* Aplica la animación en loop */
+      }
+      @keyframes slideIn {
+        0% {
+          transform: translateX(
+            190%
+          ); /* Comienza fuera de la pantalla a la derecha */
+        }
+
+        100% {
+          transform: translateX(-100%); /* Sale completamente a la izquierda */
+        }
+      }
+
+      /* Aplicación de la animación a un elemento */
+      .elemento {
+        animation: slideIn 3s ease-in-out infinite; /* 3 segundos de duración, animación continua */
+      }
+
+      /* Aplicación de la animación a un elemento */
+      .elemento {
+        animation: slideIn 3s ease-in-out infinite; /* 3 segundos de duración, animación continua */
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <ul class="nav-list">
+          <li>
+            <img
+              src="Assets/portfolio/blackstar.svg"
+              alt="Logo"
+              width="20"
+              height="20"
+            />
+            <a href="#about"> <strong>About Me / </strong> Sobre mí misma </a>
+          </li>
+          <li>
+            <img
+              src="Assets/portfolio/whitestar.svg"
+              alt="Logo"
+              width="20"
+              height="20"
+            />
+            <a href="#work"> <strong>My Work / </strong> Mis proyectos </a>
+          </li>
+          <li><a href="#contact">Contact Me / Contacta conmigo</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="text-container">
+      <div class="animated-text">Slydin'</div>
+    </div>
+  </body>
+</html>

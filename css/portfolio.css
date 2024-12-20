@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #ffffff;
+  letter-spacing: 0em;
   color: #000;
 }
 
@@ -23,6 +24,11 @@ h2 {
   margin: 0;
 }
 h3 {
+  margin: 0;
+  padding: 2px;
+}
+h4 {
+  font-size: auto;
   margin: 0;
   padding: 2px;
 }
@@ -80,7 +86,7 @@ h3 {
 }
 
 .project-box {
-  background: #ddd;
+  background: #ffffff;
   padding: 10px;
   text-align: center;
   font-weight: bold;
