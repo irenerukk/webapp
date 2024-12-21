@@ -25,114 +25,12 @@
           transform: rotate(360deg); /* Gira 360 grados */
         }
       }
-
-      .draggable {
-        position: absolute; /* Necesario para mover el elemento */
-        cursor: default; /* Indica que el elemento es arrastrable */
-        width: 100px; /* Opcional: Define un tamaño para la imagen */
-        height: auto; /* Mantén la proporción de la imagen */
-      }
     </style>
   </head>
 
   <body>
     <div class="custom-cursor"></div>
     <script src="script.js"></script>
-    <div>
-      <img
-        src="Assets/portfolio/blackstar.svg"
-        alt="Arrástrame"
-        class="draggable"
-      />
-      <img
-        src="Assets/portfolio/blackpunzon.svg"
-        alt="Arrástrame 2"
-        class="draggable"
-      />
-      <img
-        src="Assets/portfolio/whitestar.svg"
-        alt="Arrástrame 3"
-        class="draggable"
-      />
-    </div>
-
-    <script>
-      // Función para guardar y recuperar las posiciones de cada imagen
-      function getPositionFromLocalStorage(imgId) {
-        const storedX = localStorage.getItem(imgId + "_x");
-        const storedY = localStorage.getItem(imgId + "_y");
-        return {
-          x: storedX ? parseInt(storedX) : 0,
-          y: storedY ? parseInt(storedY) : 0,
-        };
-      }
-
-      function setPositionToLocalStorage(imgId, x, y) {
-        localStorage.setItem(imgId + "_x", x);
-        localStorage.setItem(imgId + "_y", y);
-      }
-
-      // Seleccionamos todas las imágenes con la clase .draggable
-      const draggables = document.querySelectorAll(".draggable");
-
-      // Variables de arrastre
-      let isDragging = false;
-      let offsetX, offsetY;
-
-      draggables.forEach((draggable) => {
-        const imgId = draggable.id;
-
-        // Recuperamos la última posición de cada imagen desde localStorage
-        const { x, y } = getPositionFromLocalStorage(imgId);
-        draggable.style.left = `${x}px`;
-        draggable.style.top = `${y}px`;
-
-        // Función para manejar el arrastre
-        function dragElement(event) {
-          if (isDragging) {
-            event.preventDefault(); // Prevenimos el comportamiento por defecto (evita seleccionar texto)
-            const draggable = event.target;
-
-            // Calculamos la nueva posición de la imagen
-            draggable.style.left = `${event.clientX - offsetX}px`;
-            draggable.style.top = `${event.clientY - offsetY}px`;
-          }
-        }
-
-        // Asignamos los eventos de mousedown, mousemove y mouseup a todas las imágenes
-        draggable.addEventListener("mousedown", (event) => {
-          isDragging = true; // Activamos el arrastre
-          offsetX = event.clientX - draggable.offsetLeft;
-          offsetY = event.clientY - draggable.offsetTop;
-
-          // Cambiamos el cursor para indicar que estamos arrastrando
-          draggable.style.cursor = "grabbing";
-        });
-
-        // Manejamos el movimiento del ratón para arrastrar las imágenes
-        document.addEventListener("mousemove", dragElement);
-
-        // Cuando se suelta el clic, desactivamos el arrastre y guardamos la nueva posición
-        document.addEventListener("mouseup", () => {
-          isDragging = false;
-          draggable.style.cursor = "pointer"; // Restauramos el cursor
-
-          // Guardamos la posición de la imagen en localStorage
-          setPositionToLocalStorage(
-            imgId,
-            draggable.offsetLeft,
-            draggable.offsetTop
-          );
-        });
-
-        // Prevenimos la selección de texto accidental durante el arrastre
-        document.addEventListener("selectstart", (event) => {
-          if (isDragging) {
-            event.preventDefault(); // Evita seleccionar texto
-          }
-        });
-      });
-    </script>
 
     <header class="header">
       <nav>
@@ -183,9 +81,27 @@
       </nav>
     </header>
 
-    <section style="padding-top: 20%; padding-bottom: 25%">
-      <h3 style="text-align: center; font-size: 2em">irenecasenave</h3>
-    </section>
+    <div
+      style="padding-top: 20%; word-spacing: -5em; padding-bottom: 30%"
+      class="concept concept-eight"
+    >
+      <h1 class="word">
+        <div class="char" data-content="i">i</div>
+        <div class="char" data-content="r">r</div>
+        <div class="char" data-content="e">e</div>
+        <div class="char" data-content="n">n</div>
+        <div class="char" data-content="e">e</div>
+        <div class="char" data-content="c">c</div>
+        <div class="char" data-content="a">a</div>
+        <div class="char" data-content="s">s</div>
+        <div class="char" data-content="e">e</div>
+        <div class="char" data-content="n">n</div>
+        <div class="char" data-content="a">a</div>
+        <div class="char" data-content="v">v</div>
+        <div class="char" data-content="e">e</div>
+      </h1>
+    </div>
+
     <main>
       <!-- About Section -->
       <section id="about" class="about">
