@@ -1,9 +1,8 @@
 body {
-  display: flex;
-  justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  text-align: center;
   background: #0d0d0d;
   overflow: hidden;
   font-family: Arial, sans-serif;
@@ -11,17 +10,18 @@ body {
 
 .container {
   position: relative;
-  display: inline-block;
+  text-align: center;
 }
 
 .dust-text {
-  font-size: 5rem;
+  font-size: 7rem;
   font-weight: bold;
   color: white;
   position: relative;
   animation: dust-animation 3s ease-in-out forwards;
   filter: blur(4px);
   opacity: 0;
+  padding-top: 20%;
 }
 
 /* Keyframes for the dust effect */
@@ -69,17 +69,17 @@ body {
     rgba(255, 255, 255, 0.1) 0%,
     rgba(0, 0, 0, 0) 70%
   );
-  animation: dust-particles 3s ease-in-out infinite;
+  animation: dust-particles 30s ease-out infinite;
 }
 
 @keyframes dust-particles {
-  0%,
+  20%,
   100% {
     opacity: 0;
     transform: translateY(30px);
   }
   50% {
-    opacity: 0.4;
+    opacity: 0;
     transform: translateY(0);
   }
 }
@@ -95,11 +95,12 @@ body {
 }
 .typewriter-container {
   display: inline-block;
+  color: #ffffff;
   overflow: hidden;
   white-space: nowrap; /* Mantiene el texto en una línea */
   border-right: 2px solid #ffffff; /* Simula el cursor */
   font-size: 2rem;
-  animation: typing 4s steps(30, end), blink-cursor 0.6s step-end infinite;
+  animation: typing 2s steps(30, end), blink-cursor 0.6s step-end infinite;
 }
 
 @keyframes typing {
@@ -107,7 +108,7 @@ body {
     width: 0;
   }
   to {
-    width: 100%; /* Depende del tamaño del texto */
+    width: 40%; /* Depende del tamaño del texto */
   }
 }
 

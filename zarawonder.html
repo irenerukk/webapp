@@ -1,1 +1,206 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/portfolio.css" />
+    <style>
+      /* Contenedor del texto */
+      .text-container {
+        position: relative;
+        width: 200%; /* Ancho del contenedor */
+        letter-spacing: -1em;
+        overflow: hidden; /* Oculta cualquier parte del texto que salga del contenedor */
+        height: 300px; /* Alto del contenedor */
+        background-color: #ffffff; /* Color de fondo opcional */
+        display: flex;
+        align-items: center;
+      }
+
+      /* Texto animado */
+      .animated-text {
+        position: absolute;
+        white-space: nowrap; /* Evita que el texto haga saltos de línea */
+        font-size: 15em;
+        color: #093c7b;
+        animation: slideIn 15s linear infinite; /* Aplica la animación en loop */
+      }
+      @keyframes slideIn {
+        0% {
+          transform: translateX(
+            130%
+          ); /* Comienza fuera de la pantalla a la derecha */
+        }
+
+        100% {
+          transform: translateX(-100%); /* Sale completamente a la izquierda */
+        }
+      }
+      /* Aplicación de la animación a un elemento */
+      .elemento {
+        animation: slideIn 3s ease-in-out infinite; /* 3 segundos de duración, animación continua */
+      }
+
+      /* Aplicación de la animación a un elemento */
+      .elemento {
+        animation: slideIn 3s ease-in-out infinite; /* 3 segundos de duración, animación continua */
+      }
+
+      .button {
+        background-color: black;
+        color: white;
+        font-family: "Helvetica", sans-serif; /* Usa Helvetica como fuente */
+        font-size: 16px;
+        max-width: 900px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 26px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s; /* Transición suave para el hover */
+      }
+
+      .rotating-image {
+        width: 30; /* Puedes ajustar el tamaño de la imagen */
+        height: 30;
+        animation: rotate 4s linear infinite; /* Aplica la animación de rotación */
+      }
+
+      /* Definir la animación de rotación */
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg); /* Comienza sin rotación */
+        }
+        100% {
+          transform: rotate(360deg); /* Gira 360 grados */
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="custom-cursor"></div>
+    <script src="script.js"></script>
+    <header class="header">
+      <nav>
+        <ul class="nav-list">
+          <li>
+            <button class="button" onclick="window.location.href='index.html'">
+              Go Back/ volver
+            </button>
+          </li>
+
+          <li>
+            <img
+              src="Assets/portfolio/blackstar.svg"
+              alt="Imagen Rotando"
+              class="rotating-image"
+              width="30"
+              height="30"
+            />
+            <a href="#about"> <strong>About Me / </strong> Sobre mí misma </a>
+          </li>
+
+          <li>
+            <img
+              src="Assets/portfolio/whitestar.svg"
+              alt="Imagen Rotando"
+              class="rotating-image"
+              width="30"
+              height="30"
+            />
+            <a href="#work"> <strong>My Work / </strong> Mis proyectos </a>
+          </li>
+
+          <li>
+            <img
+              src="Assets/portfolio/blackpunzon.svg"
+              alt="Imagen Rotando"
+              class="rotating-image"
+              width="30"
+              height="30"
+            />
+            <a href="#contact">Contact Me / Contacta conmigo</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="text-container" style="padding-top: -300px">
+      <div class="animated-text">wonder coast</div>
+    </div>
+    <br />
+    <section>
+      <img
+        src="Assets/portfolio/zarawonder.png"
+        alt="wondercoast"
+        style="height: 15%"
+        class="full-width-image"
+      />
+    </section>
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <img
+        src="Assets/portfolio/conchawonder.png"
+        style="width: 25em; height: auto; border-radius: 0%"
+      />
+      <div class="about-text" style="padding-left: 15%">
+        <h1 style="margin-bottom: -0.1em; font-size: 40px">
+          <strong
+            >Endless <br />
+            shine</strong
+          >
+        </h1>
+        <br /><br />
+        <h3 style="line-height: 20px">
+          Wonder coast es una cápsula de primavera-verano lanzada por la marca
+          Zara. Su esencia nace del mar Mediterráneo y las diferentes
+          experiencias sensoriales que causa el mismo.
+        </h3>
+      </div>
+    </section>
+
+    <section
+      style="
+        padding: 50px 5%;
+        text-align: center;
+        width: auto;
+        background-color: #093c7b;
+
+        display: flex;
+        justify-content: center;
+      "
+    >
+      <div style="display: flex; align-items: center">
+        <h3
+          class="about-text"
+          style="
+            text-align: left;
+            padding-right: 20px;
+            color: white;
+            max-width: 1500px;
+          "
+        >
+          Para mostrar la esencia de nuestra colección cápsula, se realizó un
+          fotobook de las sesiones que se realizarían para las prendas de
+          primavera-verano 2025. En este, se mostraría la personalidad y la
+          estética de la submarca Wonder Coast.
+        </h3>
+
+        <img
+          style="height: 100%; width: 110%"
+          src="Assets/portfolio/fotobookinterior.gif"
+          alt="Fotobook Interior"
+        />
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer" style="text-align: center; margin-top: 2em">
+      <p>© 2024 Irene Casenave</p>
+    </footer>
+  </body>
+</html>

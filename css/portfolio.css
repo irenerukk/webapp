@@ -1,3 +1,24 @@
+/* Large Desktop */
+@media only screen and (min-width: 1601px) {
+  body {
+    font-size: 2rem;
+    background-color: #a0a0a0;
+  }
+  /* Small Desktop */
+  @media only screen and (min-width: 1201px) and (max-width: 1600px) {
+    body {
+      font-size: 1.8rem;
+      background-color: #b0b0b0;
+    }
+  }
+  /* Tablet Landscape */
+  @media only screen and (min-width: 801px) and (max-width: 1200px) and (orientation: landscape) {
+    body {
+      font-size: 1.6rem;
+      background-color: #c0c0c0;
+    }
+  }
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1;
@@ -6,6 +27,22 @@ body {
   background-color: #ffffff;
   letter-spacing: 0em;
   color: #000;
+  cursor: none; /* Esconde el cursor estándar */
+}
+
+img {
+  pointer-events: none; /* Desactiva el clic sobre la imagen */
+}
+
+.custom-cursor {
+  position: sticky;
+  width: 40px;
+  height: 40px;
+  background: rgba(32, 32, 32, 0.7);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
 }
 
 a {
@@ -38,6 +75,7 @@ h4 {
   padding: 20px 10%;
   display: flex; /* Activa Flexbox */
   align-items: center;
+  cursor: none; /* Esconde el cursor estándar */
 }
 
 .nav-list {
@@ -64,9 +102,8 @@ h4 {
 }
 
 .profile-image {
-  width: 600px;
-  height: 700%;
-  margin-right: 20px;
+  width: 40em;
+  height: auto;
 }
 
 .about-text {
@@ -168,4 +205,24 @@ h4 {
   text-align: center;
   padding: 10px;
   width: auto;
+}
+
+/* Mobile Landscape */
+@media only screen and (max-width: 800px) and (orientation: landscape) {
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0, 5em;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    letter-spacing: 0em;
+    color: #000;
+    cursor: none; /* Esconde el cursor estándar */
+  }
+  .profile-image {
+    width: 50px;
+    height: 50%;
+    margin-right: 10px;
+  }
 }

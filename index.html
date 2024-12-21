@@ -25,10 +25,115 @@
           transform: rotate(360deg); /* Gira 360 grados */
         }
       }
+
+      .draggable {
+        position: absolute; /* Necesario para mover el elemento */
+        cursor: default; /* Indica que el elemento es arrastrable */
+        width: 100px; /* Opcional: Define un tamaño para la imagen */
+        height: auto; /* Mantén la proporción de la imagen */
+      }
     </style>
   </head>
 
   <body>
+    <div class="custom-cursor"></div>
+    <script src="script.js"></script>
+    <div>
+      <img
+        src="Assets/portfolio/blackstar.svg"
+        alt="Arrástrame"
+        class="draggable"
+      />
+      <img
+        src="Assets/portfolio/blackpunzon.svg"
+        alt="Arrástrame 2"
+        class="draggable"
+      />
+      <img
+        src="Assets/portfolio/whitestar.svg"
+        alt="Arrástrame 3"
+        class="draggable"
+      />
+    </div>
+
+    <script>
+      // Función para guardar y recuperar las posiciones de cada imagen
+      function getPositionFromLocalStorage(imgId) {
+        const storedX = localStorage.getItem(imgId + "_x");
+        const storedY = localStorage.getItem(imgId + "_y");
+        return {
+          x: storedX ? parseInt(storedX) : 0,
+          y: storedY ? parseInt(storedY) : 0,
+        };
+      }
+
+      function setPositionToLocalStorage(imgId, x, y) {
+        localStorage.setItem(imgId + "_x", x);
+        localStorage.setItem(imgId + "_y", y);
+      }
+
+      // Seleccionamos todas las imágenes con la clase .draggable
+      const draggables = document.querySelectorAll(".draggable");
+
+      // Variables de arrastre
+      let isDragging = false;
+      let offsetX, offsetY;
+
+      draggables.forEach((draggable) => {
+        const imgId = draggable.id;
+
+        // Recuperamos la última posición de cada imagen desde localStorage
+        const { x, y } = getPositionFromLocalStorage(imgId);
+        draggable.style.left = `${x}px`;
+        draggable.style.top = `${y}px`;
+
+        // Función para manejar el arrastre
+        function dragElement(event) {
+          if (isDragging) {
+            event.preventDefault(); // Prevenimos el comportamiento por defecto (evita seleccionar texto)
+            const draggable = event.target;
+
+            // Calculamos la nueva posición de la imagen
+            draggable.style.left = `${event.clientX - offsetX}px`;
+            draggable.style.top = `${event.clientY - offsetY}px`;
+          }
+        }
+
+        // Asignamos los eventos de mousedown, mousemove y mouseup a todas las imágenes
+        draggable.addEventListener("mousedown", (event) => {
+          isDragging = true; // Activamos el arrastre
+          offsetX = event.clientX - draggable.offsetLeft;
+          offsetY = event.clientY - draggable.offsetTop;
+
+          // Cambiamos el cursor para indicar que estamos arrastrando
+          draggable.style.cursor = "grabbing";
+        });
+
+        // Manejamos el movimiento del ratón para arrastrar las imágenes
+        document.addEventListener("mousemove", dragElement);
+
+        // Cuando se suelta el clic, desactivamos el arrastre y guardamos la nueva posición
+        document.addEventListener("mouseup", () => {
+          isDragging = false;
+          draggable.style.cursor = "pointer"; // Restauramos el cursor
+
+          // Guardamos la posición de la imagen en localStorage
+          setPositionToLocalStorage(
+            imgId,
+            draggable.offsetLeft,
+            draggable.offsetTop
+          );
+        });
+
+        // Prevenimos la selección de texto accidental durante el arrastre
+        document.addEventListener("selectstart", (event) => {
+          if (isDragging) {
+            event.preventDefault(); // Evita seleccionar texto
+          }
+        });
+      });
+    </script>
+
     <header class="header">
       <nav>
         <ul class="nav-list">
@@ -78,6 +183,9 @@
       </nav>
     </header>
 
+    <section style="padding-top: 20%; padding-bottom: 25%">
+      <h3 style="text-align: center; font-size: 2em">irenecasenave</h3>
+    </section>
     <main>
       <!-- About Section -->
       <section id="about" class="about">
@@ -85,36 +193,29 @@
           src="Assets/portfolio/yo.jpeg"
           alt="Irene Casenave"
           class="profile-image"
-          style="width: 40em; height: auto; border-radius: 0%"
         />
+
         <div class="about-text">
-          <h1
-            style="margin-bottom: -0.1em; padding-left: 50px; font-size: 20px"
-          >
+          <h1 style="margin-bottom: -0.1em; padding-left: 5em; font-size: 20px">
             ¡Hola! Me llamo
           </h1>
-          <span
+
+          <h1
             class="highlight"
             style="
-              font-size: 60px;
+              font-size: 55px;
               letter-spacing: 0.0005em;
-              padding-left: 50px;
+              padding-left: 1.8em;
               max-width: 900px;
             "
-            >Irene
-          </span>
-          <span
-            class="highlight"
-            style="
-              font-size: 60px;
-              letter-spacing: 0.0005em;
-              padding-left: 50px;
-              max-width: 900px;
-            "
-            >Casenave
-          </span>
+          >
+            Irene <br />
+            Casenave
+          </h1>
+          <br />
+
           <br /><br />
-          <h3 style="line-height: 20px; padding-left: 50px">
+          <h3 style="line-height: 20px; padding-left: 5em">
             Soy estudiante de Diseño Audiovisual e Ilustración en UDIT. Siempre
             tuve una visión muy artística de la vida donde el expresarme a mi
             manera era lo más natural. Sin embargo, con el tiempo y a raíz de
@@ -123,7 +224,7 @@
           </h3>
           <br />
 
-          <h3 style="padding-left: 50px">
+          <h3 style="padding-left: 5em">
             más rígida y monótona de la realidad. Hoy me encuentro en un proceso
             de desaprender esas rigideces y reconectar con aquella niña que no
             temía plasmar su mundo de la forma más alocada posible.
@@ -156,7 +257,7 @@
           <!-- Proyecto 2 -->
           <div class="project-box;">
             <div class="image-container" onclick="toggleOverlay(this)">
-              <a href="slydin.html">
+              <a href="zarawonder.html">
                 <img
                   style="height: 70%; height: 70%"
                   src="Assets/portfolio/zara.png"
@@ -178,7 +279,7 @@
               margin-bottom: 0.1em;
               font-size: 2em;
               text-align: left;
-              padding-top: -20px;
+              padding-top: -15px;
             "
           >
             Contact me/ <br />
@@ -194,7 +295,8 @@
           <img
             style="
               grid-column: span;
-              padding-left: 60%;
+              padding-left: 100%;
+              padding-top: 0em;
               padding-bottom: 30%;
               scale: 150%;
             "
