@@ -5,36 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="./css/portfolio.css" />
-    <style>
-      /* Cambio de color al hacer hover */
-      .button:hover {
-        background-color: rgb(255, 255, 255);
-        color: black;
-      }
-      .rotating-image {
-        width: 30; /* Puedes ajustar el tamaño de la imagen */
-        height: 30;
-        animation: rotate 4s linear infinite; /* Aplica la animación de rotación */
-      }
-      /* Definir la animación de rotación */
-      @keyframes rotate {
-        0% {
-          transform: rotate(0deg); /* Comienza sin rotación */
-        }
-        100% {
-          transform: rotate(360deg); /* Gira 360 grados */
-        }
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="css/media-queries.css"
+      media="screen and (max-width: 768px)"
+    />
   </head>
-
+  <!-- cuerpo -->
   <body>
     <div class="custom-cursor"></div>
     <script src="script.js"></script>
-
+    <!-- encabezado -->
     <header class="header">
+      <!-- lista botón y tres estrellas -->
       <nav>
         <ul class="nav-list">
+          <li class="menu">
+            <!-- Botón menú proyectos web -->
+            <button class="menu-btn">Other projects</button>
+            <div class="menu-content">
+              <a href="404.html">Error 404</a>
+              <a href="someoutstandingweb.html">Some outstanding webs</a>
+            </div>
+          </li>
           <li>
             <img
               src="Assets/portfolio/blackstar.svg"
@@ -42,11 +35,8 @@
               class="rotating-image"
               width="30"
               height="30"
-              padding-left="80px"
             />
-            <a style="align-items: center; padding-left: 60px" href="#about">
-              <strong>About Me / </strong> Sobre mí misma
-            </a>
+            <a href="#about"> <strong>About Me / </strong> Sobre mí misma </a>
           </li>
 
           <li>
@@ -56,11 +46,8 @@
               class="rotating-image"
               width="30"
               height="30"
-              padding-left="60px"
             />
-            <a style="padding-left: 60px" href="#work">
-              <strong>My Work / </strong> Mis proyectos
-            </a>
+            <a href="#work"> <strong>My Work / </strong> Mis proyectos </a>
           </li>
 
           <li>
@@ -70,19 +57,15 @@
               class="rotating-image"
               width="30"
               height="30"
-              padding-left="60px"
-              60px
             />
-            <a style="padding-left: 60px" href="#contact"
-              >Contact Me / Contacta conmigo</a
-            >
+            <a href="#contact">Contact Me / Contacta conmigo</a>
           </li>
         </ul>
       </nav>
     </header>
-
+    <!-- Cascada de letras irenecasenave -->
     <div
-      style="padding-top: 20%; word-spacing: -5em; padding-bottom: 30%"
+      style="padding-top: 20%; word-spacing: -5em; padding-bottom: 25%"
       class="concept concept-eight"
     >
       <h1 class="word">
@@ -103,7 +86,7 @@
     </div>
 
     <main>
-      <!-- About Section -->
+      <!-- Sección about me -->
       <section id="about" class="about">
         <img
           src="Assets/portfolio/yo.jpeg"
@@ -111,50 +94,37 @@
           class="profile-image"
         />
 
-        <div class="about-text">
-          <h1 style="margin-bottom: -0.1em; padding-left: 5em; font-size: 20px">
-            ¡Hola! Me llamo
-          </h1>
+        <div class=".textosaludo">
+          <h5>¡Hola! Me llamo</h5>
 
-          <h1
-            class="highlight"
-            style="
-              font-size: 55px;
-              letter-spacing: 0.0005em;
-              padding-left: 1.8em;
-              max-width: 900px;
-            "
-          >
+          <h1 class="highlight">
             Irene <br />
             Casenave
           </h1>
           <br />
 
           <br /><br />
-          <h3 style="line-height: 20px; padding-left: 5em">
+          <h3>
             Soy estudiante de Diseño Audiovisual e Ilustración en UDIT. Siempre
             tuve una visión muy artística de la vida donde el expresarme a mi
             manera era lo más natural. Sin embargo, con el tiempo y a raíz de
             diversas experiencias y factores sociales comencé a adaptarme a una
-            visión
+            visión más rígida y monótona de la realidad.
           </h3>
           <br />
-
-          <h3 style="padding-left: 5em">
-            más rígida y monótona de la realidad. Hoy me encuentro en un proceso
-            de desaprender esas rigideces y reconectar con aquella niña que no
-            temía plasmar su mundo de la forma más alocada posible.
+          <h3>
+            Hoy me encuentro en un proceso de desaprender esas rigideces y
+            reconectar con aquella niña que no temía plasmar su mundo de la
+            forma más alocada posible.
           </h3>
         </div>
       </section>
       <br />
       <br />
-      <!-- Work Section -->
+      <!-- Sección my work -->
       <section id="work" class="work">
-        <strong style="display: block; margin-bottom: 0.1em; font-size: 2em">
-          My Work /
-        </strong>
-        <p style="margin-top: 0; font-size: 2em">Mis proyectos</p>
+        <strong> My Work / </strong>
+        <strong> Mis proyectos </strong>
 
         <div class="projects-grid">
           <!-- Proyecto 1 -->
@@ -189,15 +159,7 @@
       <!-- Contact Section -->
       <section class="contact">
         <span>
-          <strong
-            style="
-              display: block;
-              margin-bottom: 0.1em;
-              font-size: 2em;
-              text-align: left;
-              padding-top: -15px;
-            "
-          >
+          <strong>
             Contact me/ <br />
             Contacta conmigo
           </strong>
@@ -208,16 +170,7 @@
         </span>
 
         <span>
-          <img
-            style="
-              grid-column: span;
-              padding-left: 100%;
-              padding-top: 0em;
-              padding-bottom: 30%;
-              scale: 150%;
-            "
-            src="Assets/portfolio/ruedas2.svg"
-          />
+          <img class=".contact-image" src="Assets/portfolio/ruedas2.svg" />
         </span>
       </section>
     </main>
