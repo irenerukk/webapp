@@ -1,4 +1,45 @@
 /* Efectos */
+/* Efecto SlideIn*/
+/* Contenedor del texto */
+.text-container {
+  position: relative;
+  width: 100%; /* Ancho del contenedor */
+  letter-spacing: -1.5em;
+  overflow: hidden; /* Oculta cualquier parte del texto que salga del contenedor */
+  height: 300px; /* Alto del contenedor */
+  background-color: #ffffff; /* Color de fondo opcional */
+  display: flex;
+  align-items: center;
+}
+
+/* Texto animado */
+.animated-text {
+  position: absolute;
+  white-space: nowrap; /* Evita que el texto haga saltos de línea */
+  font-size: 15em;
+  color: #000000;
+  animation: slideIn 15s linear infinite; /* Aplica la animación en loop */
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(
+      300%
+    ); /* Comienza fuera de la pantalla a la derecha */
+  }
+
+  100% {
+    transform: translateX(-300%); /* Sale completamente a la izquierda */
+  }
+}
+/* Aplicación de la animación a un elemento */
+.elemento {
+  animation: slideIn 3s ease-in-out infinite; /* 3 segundos de duración, animación continua */
+}
+
+/* Aplicación de la animación a un elemento */
+.elemento {
+  animation: slideIn 3s ease-in-out infinite; /* 3 segundos de duración, animación continua */
+}
 /* Rotar */
 @keyframes rotate {
   0% {
@@ -302,7 +343,7 @@ h5 {
   color: #f1f1f1;
 }
 .work {
-  padding: 60px 10%;
+  padding: 50px 7%;
   background: #fff;
   display: block;
   margin-bottom: 0.1em;
@@ -311,7 +352,6 @@ h5 {
 }
 .contact {
   display: inline;
-
   padding: 10px 10%;
   background: #fff;
   display: block;
@@ -321,6 +361,10 @@ h5 {
 }
 .contact-info p {
   margin: 10px 0;
+}
+.proyectouno {
+  display: inline;
+  padding: 5px 10%;
 }
 
 /* Ajustes a la imagen */
@@ -368,6 +412,11 @@ h5 {
 .button:hover {
   background-color: rgb(255, 255, 255);
   color: black;
+}
+
+.imagenslydin1 {
+  height: 0px;
+  padding-left: 10%;
 }
 
 .contact-image {
