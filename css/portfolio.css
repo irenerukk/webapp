@@ -234,7 +234,9 @@ h2 {
 h3 {
   margin: 0;
   padding: 2px;
-  padding-left: 100px;
+  padding-left: 50px;
+  font-size: 12px;
+  max-width: 900px;
 }
 h4 {
   font-size: auto;
@@ -382,4 +384,6 @@ h5 {
   text-align: center;
   padding: 10px;
   width: auto;
+  text-align: enter;
+  margin-top: 2em;
 }
