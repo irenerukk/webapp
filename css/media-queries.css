@@ -147,8 +147,9 @@
   /* Encabezado */
   .header {
     background: #ffffff;
-    padding: 10px 10%;
+    padding: 5px 10%;
     display: flex; /* Activa Flexbox */
+    padding-left: 20%;
     align-items: center;
     cursor: none; /* Esconde el cursor estándar */
   }
@@ -159,7 +160,7 @@
     align-items: center;
   }
   .nav-list li {
-    margin: 0 30px;
+    margin: 0 10px;
   }
   .nav-list a {
     font-weight: bold;
@@ -248,7 +249,7 @@
     margin: 0;
     padding: 2px;
     padding-left: 50px;
-    font-size: 12px;
+    font-size: 40px;
     max-width: 900px;
   }
   h4 {
@@ -445,7 +446,7 @@
 
   .char {
     display: inline-block;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
     position: relative;
     opacity: 0; /* Inicialmente las letras son invisibles */
@@ -546,7 +547,7 @@
   /* Encabezado */
   .header {
     background: #ffffff;
-    padding: 0px 12%;
+    padding: 0px 0%;
     display: flex; /* Activa Flexbox */
     align-items: center;
     cursor: none; /* Esconde el cursor estándar */
@@ -558,7 +559,7 @@
     align-items: center;
   }
   .nav-list li {
-    margin: 4 10px;
+    margin: 2 5px;
   }
   .nav-list a {
     display: none;
@@ -584,8 +585,9 @@
 
   .menu-btn {
     background-color: #191919;
+    white-space: nowrap;
     color: rgb(254, 254, 254);
-    padding: 10px 20px;
+    padding: 10px 30px;
     border: none;
     cursor: pointer;
     border-radius: 20px;
@@ -604,6 +606,7 @@
     border-radius: 5px;
     z-index: 1;
     margin-top: 5px;
+    font-size: 16px;
   }
 
   .menu-content a {
@@ -717,7 +720,7 @@
     padding: 50px 10%;
     background: #ffffff;
     align-items: center;
-    display: flex;
+    display: inline;
     background: #fff;
     display: block;
     font-size: 1em;
@@ -731,8 +734,8 @@
   /* Ajustes a la imagen */
   .profile-image {
     width: 25em;
-    padding-left: 30px;
-    padding-bottom: 20px;
+    padding-left: 1%;
+    padding-bottom: 20%;
     height: auto;
   }
   .image-container {
@@ -780,10 +783,11 @@
   }
 
   .contact-image {
+    display: inline;
     grid-column: span;
-    padding-left: 20%;
-    padding-bottom: 60%;
-    scale: 50%;
+    padding-left: 2%;
+    padding-bottom: 100%;
+    scale: 70%;
   }
 
   .full-width-image {
