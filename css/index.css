@@ -1,18 +1,6 @@
 @import "media-queries.css";
 @import "base.css";
 
-/* Estilo inicial */
-.concept-eight {
-  text-align: left;
-  padding-top: 10%;
-  padding-bottom: 10%;
-  padding-left: 6%;
-}
-.word {
-  display: inline-block;
-  white-space: nowrap; /* Para que las letras estén en una sola línea */
-}
-
 /* Ajustes de cursor */
 .custom-cursor {
   position: sticky;
@@ -28,12 +16,24 @@
 /* Encabezado */
 .header {
   background: #ffffff;
-  padding: 1px 1%;
+  padding: 1px 20%;
   display: flex; /* Activa Flexbox */
   align-items: center;
-  padding-left: 1%;
+  padding-top: 2%;
+  padding-left: 3%;
   cursor: none; /* Esconde el cursor estándar */
 }
+
+/* Rotar */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); /* Comienza sin rotación */
+  }
+  100% {
+    transform: rotate(360deg); /* Gira 360 grados */
+  }
+}
+
 .rotating-image {
   width: 25px; /* Puedes ajustar el tamaño de la imagen */
   height: 25px;
@@ -46,8 +46,8 @@
   color: white;
   font-family: "Helvetica", sans-serif; /* Usa Helvetica como fuente */
   font-size: 12px;
-  max-width: 500px;
-  padding: 5px 15px;
+  max-width: 300%;
+  padding: 5px 10px;
   border: none;
   border-radius: 26px;
   cursor: pointer;
@@ -63,12 +63,13 @@
 .menu {
   position: relative;
   display: inline-block;
+  padding-right: 40px;
 }
 
 .menu-btn {
   background-color: #191919;
   color: rgb(254, 254, 254);
-  padding: 10px 20px;
+  padding: 5px 10px;
   border: none;
   cursor: pointer;
   border-radius: 20px;
@@ -113,11 +114,12 @@
   align-items: center;
 }
 .nav-list li {
-  margin: 0 15px;
+  margin: -3px;
 }
 .nav-list a {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 15px;
+
   align-items: center;
 }
 /* Ajustes listas y links */
@@ -129,6 +131,17 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+/* Estilo inicial */
+.concept-eight {
+  text-align: left;
+  padding-top: 4%;
+  padding-bottom: 10%;
+  padding-left: -4%;
+}
+.word {
+  display: inline-block;
+  white-space: nowrap; /* Para que las letras estén en una sola línea */
 }
 
 /* Cuerpo */
@@ -150,15 +163,15 @@ ul {
 
 .char {
   display: inline-block;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: bold;
   position: relative;
   opacity: 0; /* Inicialmente las letras son invisibles */
   animation: falls 1.5s ease-out forwards;
-  margin-right: 1px; /* Espacio entre las letras */
-  padding-top: 10%;
-  word-spacing: -5em;
-  padding-bottom: 15%;
+  margin-right: 2px; /* Espacio entre las letras */
+  padding-top: 20%;
+  word-spacing: -6em;
+  padding-bottom: 0%;
 }
 
 .char:nth-child(1) {
@@ -222,25 +235,47 @@ ul {
 .profile-image {
   align-items: center;
   height: auto;
-  width: 15em;
+  width: 20em;
   padding-bottom: 20px;
+  padding-left: 0.005%;
 }
 h1,
 h2 {
-  font-size: 30px;
+  font-size: 20px;
   letter-spacing: 0.0005em;
+
   padding-left: 0.005em;
   max-width: 300px;
   margin: 0;
+  padding-left: 10%;
 }
 h3 {
-  font-size: 14px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 15px;
   letter-spacing: 0.0005em;
-  padding-left: 0.005em;
-  max-width: 300px;
+  padding-left: 2em;
+  max-width: 200px;
   margin: 0;
   color: #000350;
 }
+h4 {
+  font-size: 20px;
+  letter-spacing: 0.0005em;
+  padding-left: 0.005em;
+  max-width: 300px;
+  margin: 0;
+  padding-left: 5%;
+}
+h5 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.0005em;
+  padding-left: 2em;
+  max-width: 135px;
+  margin: 0;
+  color: #000350;
+}
+
 .textosaludo {
   font-size: 16px;
   padding: 20px;
@@ -255,9 +290,9 @@ h3 {
 .text-container {
   position: relative;
   width: 300%; /* Ancho del contenedor */
-  letter-spacing: -1.5em;
+  letter-spacing: -1em;
   overflow: hidden; /* Oculta cualquier parte del texto que salga del contenedor */
-  height: 300px; /* Alto del contenedor */
+  height: 200px; /* Alto del contenedor */
   background-color: #ffffff; /* Color de fondo opcional */
   display: flex;
   align-items: center;
@@ -267,19 +302,17 @@ h3 {
 .animated-text {
   position: absolute;
   white-space: nowrap; /* Evita que el texto haga saltos de línea */
-  font-size: 15em;
+  font-size: 10em;
   color: #000000;
-  animation: slideIn 15s linear infinite; /* Aplica la animación en loop */
+  animation: slideIn 7s linear infinite; /* Aplica la animación en loop */
 }
 @keyframes slideIn {
   0% {
-    transform: translateX(
-      300%
-    ); /* Comienza fuera de la pantalla a la derecha */
+    transform: translateX(50%); /* Comienza fuera de la pantalla a la derecha */
   }
 
   100% {
-    transform: translateX(-300%); /* Sale completamente a la izquierda */
+    transform: translateX(-100%); /* Sale completamente a la izquierda */
   }
 }
 /* Aplicación de la animación a un elemento */
@@ -290,4 +323,64 @@ h3 {
 /* Aplicación de la animación a un elemento */
 .elemento {
   animation: slideIn 3s ease-in-out infinite; /* 3 segundos de duración, animación continua */
+}
+
+.proyectouno {
+  display: inline;
+  padding: 10px 10%;
+}
+
+.about {
+  align-items: center;
+  padding: 50px 5%;
+  color: #ffffff;
+}
+.slydin {
+  align-items: left;
+  padding: 40px 3%;
+  background: #000000;
+  color: #ffffff;
+}
+.image-container {
+  position: left;
+  width: 36%;
+  height: 36%;
+  margin: 0;
+  overflow: hidden; /* Es importante para evitar que la imagen sobresalga */
+}
+.project-box {
+  background: #ffffff;
+  padding: 10px 5px;
+
+  height: 36%; /* Ajustamos el tamaño de las cajas de proyectos */
+  width: 36%; /* Hacemos que ocupe todo el ancho disponible */
+  text-align: left;
+  font-weight: bold;
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Agregamos sombra */
+  overflow: hidden; /* Evitar que la imagen se desborde */
+}
+
+.project-grid {
+  display: flex;
+  background: #ffffff;
+  padding: 10px 3px;
+  padding-left: 8px;
+  height: 10%; /* Ajustamos el tamaño de las cajas de proyectos */
+  width: 120%; /* Hacemos que ocupe todo el ancho disponible */
+  text-align: left;
+  font-weight: bold;
+  border-radius: 10px; /* Esquinas redondeadas */
+  overflow: hidden; /* Evitar que la imagen se desborde */
+}
+.text-style {
+  padding-top: 10%;
+}
+.slydin-image {
+  height: 10%;
+}
+.image-tarjeta {
+  height: 120%;
+  width: auto;
+  padding-left: 40%;
 }

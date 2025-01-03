@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
     <title>Portfolio</title>
     <link rel="stylesheet" href="./css/index.css" />
   </head>
@@ -28,8 +31,6 @@
               src="Assets/portfolio/blackstar.svg"
               alt="Imagen Rotando"
               class="rotating-image"
-              width="30"
-              height="30"
             />
             <a href="#about"> <strong>About Me </strong> </a>
           </li>
@@ -39,8 +40,6 @@
               src="Assets/portfolio/whitestar.svg"
               alt="Imagen Rotando"
               class="rotating-image"
-              width="30"
-              height="30"
             />
             <a href="#work"> <strong>My Work</strong> </a>
           </li>
@@ -50,8 +49,6 @@
               src="Assets/portfolio/blackpunzon.svg"
               alt="Imagen Rotando"
               class="rotating-image"
-              width="30"
-              height="30"
             />
             <a href="#contact">Contact Me</a>
           </li>
@@ -86,106 +83,129 @@
           class="profile-image"
         />
 
-        <div class=".textosaludo">
+        <div class="project-grid">
           <h1 class="highlight">
             ¡Hola! <br />
             Soy Irene <br />
             Casenave
           </h1>
-        </div>
-        <br />
 
-        <h3>
-          Soy estudianted de Diseño Audiovisual e Ilustración en UDIT,
-          (Universidad de Diseño, innovación y Tecnología). Durante estos años
-          he aprendido mucho de diferentes disciplinas: ilustración, edición de
-          video, branding y diseño gráfico.
-        </h3>
-      </section>
-      <br />
-      <br />
-      <!-- Sección my work -->
-      <section id="work" class="work">
-        <strong> My Work / </strong>
-        <strong> Mis proyectos </strong>
-        <br />
+          <br />
 
-        <div class="projects-grid">
-          <!-- Proyecto 1 -->
-          <div class="project-box;">
-            <div class="image-container" onclick="toggleOverlay(this)">
-              <a href="slydin.html">
-                <img
-                  style="height: 70%; height: 70%"
-                  src="Assets/portfolio/slydin2.png"
-                  alt="Slydin"
-                />
-                <div class="overlay"></div>
-              </a>
-            </div>
-          </div>
-          <!-- Proyecto 2 -->
-          <div class="project-box;">
-            <div class="image-container" onclick="toggleOverlay(this)">
-              <a href="zarawonder.html">
-                <img
-                  style="height: 70%; height: 70%"
-                  src="Assets/portfolio/zara.png"
-                  alt="Slydin"
-                />
-                <div class="overlay"></div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class=".proyectouno">
-        <div class="text-container">
-          <div class="animated-text">Slydin' Slydin' Slydin'</div>
-        </div>
-        <br />
-        <img
-          src="Assets/portfolio/slydin intro.png"
-          alt="Slydin intro"
-          style="height: 15%"
-          class="full-width-image"
-        />
-      </section>
-      <!-- About Section -->
-      <section id="about" class="about">
-        <img src="Assets/portfolio/tarjetaslydin.png" alt="Irene Casenave" />
-        <div class="about-text" style="padding-left: 15%">
-          <h1 style="margin-bottom: -0.1em; font-size: 40px">
-            <strong
-              >Tus pasos <br />
-              nuestra historia</strong
-            >
-          </h1>
-          <br /><br />
-          <h3 style="line-height: 20px">
-            Conoce más sobre Slydin' en la sección my work/ mis proyectos
+          <h3 class="project-grid">
+            Soy estudianted de Diseño Audiovisual e Ilustración en UDIT,
+            (Universidad de Diseño, innovación y Tecnología). Durante estos años
+            he aprendido mucho de diferentes disciplinas: ilustración, branding
+            y diseño gráfico.
           </h3>
         </div>
       </section>
-      <!-- Contact Section -->
-      <section class="contact">
-        <span
-          ><div>
-            <strong>
-              Contact me/ <br />
-              Contacta conmigo <br />
-            </strong>
-            rrss: irenecasenave <br />
-            gmail:irenerukis@gmail.com
+      <br />
+      <br />
+    </main>
+    <!-- Sección my work -->
+    <section class="slydin">
+      <h4 style="color: rgb(255, 255, 255)">Mis proyectos/ my work</h4>
+      <br />
+      <br />
+      <div>
+        <!-- Proyecto 1 -->
+        <div class="project-box;">
+          <div class="image-container" onclick="toggleOverlay(this)">
+            <a href="slydin.html">
+              <img src="Assets/portfolio/slydin2.png" alt="Slydin" />
+              <div class="overlay"></div>
+            </a>
           </div>
-        </span>
+        </div>
 
+        <!-- Proyecto 2 -->
+        <div class="project-box;">
+          <div class="image-container" onclick="toggleOverlay(this)">
+            <a href="zarawonder.html">
+              <img src="Assets/portfolio/zara.png" alt="Slydin" />
+              <div class="overlay"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class=".proyectouno">
+      <div class="text-container">
+        <div class="animated-text">
+          Slydin' Slydin' Slydin' Slydin' Slydin' Slydin'
+        </div>
+      </div>
+      <br />
+      <img
+        src="Assets/portfolio/slydin intro.png"
+        alt="Slydin intro"
+        class="slydin-image"
+        class="full-width-image"
+      />
+      <br />
+      <br />
+      <br />
+      <br />
+      <section class="project-grid">
         <div>
-          <img class="contact-image" src="Assets/portfolio/ruedas2.svg" />
+          <h3 class="text-style">
+            <strong>
+              Tus pasos <br />
+              Nuestra historia
+            </strong>
+            <br />
+            <br />
+            <br />
+            <h5>
+              Slydin’ es una marca de deporte de nieve que tiene como objetivo
+              acompañarte y darte seguridad en tus actividades de montaña.
+              Slydin’ busca ser tu compañero tanto dentro como fuera de la pista
+              de esquí.
+            </h5>
+          </h3>
+        </div>
+        <div>
+          <img
+            class="image-tarjeta"
+            src="Assets/portfolio/tarjetaslydin.png"
+            alt="Irene Casenave"
+          />
         </div>
       </section>
-    </main>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="about">
+      <img
+        class="image-tarjeta"
+        src="Assets/portfolio/tarjetaslydin.png"
+        alt="Irene Casenave"
+      />
+      <div class="about-text">
+        <br /><br />
+        <h3 style="line-height: 20px">
+          Conoce más sobre Slydin' en la sección my work/ mis proyectos
+        </h3>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact">
+      <span>
+        <div>
+          <strong>
+            Contact me/ <br />
+            Contacta conmigo <br />
+          </strong>
+          rrss: irenecasenave <br />
+          gmail:irenerukis@gmail.com
+        </div>
+      </span>
+
+      <div>
+        <img class="contact-image" src="Assets/portfolio/ruedas2.svg" />
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
