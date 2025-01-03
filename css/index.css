@@ -233,28 +233,33 @@ ul {
 }
 /* Ajustes a la imagen */
 .profile-image {
-  align-items: center;
   height: auto;
-  width: 20em;
-  padding-bottom: 20px;
-  padding-left: 0.005%;
+  width: 12em;
+
+  align-items: center;
 }
-h1,
-h2 {
+h1 {
   font-size: 20px;
   letter-spacing: 0.0005em;
-
   padding-left: 0.005em;
   max-width: 300px;
   margin: 0;
   padding-left: 10%;
 }
-h3 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 15px;
+h2 {
+  font-size: 14px;
   letter-spacing: 0.0005em;
   padding-left: 2em;
-  max-width: 200px;
+  max-width: 150px;
+  margin: 0;
+  color: #000350;
+}
+h3 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.0005em;
+  padding-left: 0.1em;
+  max-width: 300px;
   margin: 0;
   color: #000350;
 }
@@ -270,7 +275,7 @@ h5 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 12px;
   letter-spacing: 0.0005em;
-  padding-left: 2em;
+  padding-left: 0.05em;
   max-width: 135px;
   margin: 0;
   color: #000350;
@@ -327,7 +332,6 @@ h5 {
 
 .proyectouno {
   display: inline;
-  padding: 10px 10%;
 }
 
 .about {
@@ -350,7 +354,7 @@ h5 {
 }
 .project-box {
   background: #ffffff;
-  padding: 10px 5px;
+  padding: 1px 5px;
 
   height: 36%; /* Ajustamos el tamaño de las cajas de proyectos */
   width: 36%; /* Hacemos que ocupe todo el ancho disponible */
@@ -365,9 +369,9 @@ h5 {
   display: flex;
   background: #ffffff;
   padding: 10px 3px;
-  padding-left: 8px;
-  height: 10%; /* Ajustamos el tamaño de las cajas de proyectos */
-  width: 120%; /* Hacemos que ocupe todo el ancho disponible */
+  padding-left: 25px;
+  height: 100%; /* Ajustamos el tamaño de las cajas de proyectos */
+  width: 200%; /* Hacemos que ocupe todo el ancho disponible */
   text-align: left;
   font-weight: bold;
   border-radius: 10px; /* Esquinas redondeadas */
@@ -380,7 +384,112 @@ h5 {
   height: 10%;
 }
 .image-tarjeta {
-  height: 120%;
+  height: 12%;
   width: auto;
-  padding-left: 40%;
+  padding-left: 15%;
+}
+.body {
+  margin: 0;
+  height: 60vh; /* Full viewport height */
+  display: grid;
+  grid-template-rows: 1fr 2fr; /* Upper part takes 1/3, lower part 2/3 */
+  gap: 40px;
+  grid-template-columns: 1fr 1fr; /* Two equal columns in lower part */
+  align-items: center;
+}
+
+.upper {
+  grid-column: 1 / -1; /* Span both columns */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+}
+
+.lower-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.lower-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+.img-padding {
+  padding: 25px; /* Adjust padding as needed */
+  display: auto; /* Ensures the image respects padding */
+  max-width: 140%; /* Prevents the image from exceeding its container width */
+  height: auto; /* Maintains the aspect ratio */
+  box-sizing: border-box; /* Includes padding in the total width/height */
+}
+.grid-container {
+  display: grid;
+  width: 400px; /* Fixed width */
+  grid-template-columns: 1fr; /* Single column */
+  gap: 10px; /* Space between items (optional) */
+  margin: 0 auto; /* Centers the grid horizontally */
+  border: 1px solid #ccc; /* Optional: border for visualization */
+}
+.about-text {
+  max-width: 30px;
+}
+
+.section-cartelas {
+  padding-left: 5 5%;
+}
+.image-cartelas {
+  /* Adjust padding as needed */
+  display: auto; /* Ensures the image respects padding */
+  max-width: 50%; /* Prevents the image from exceeding its container width */
+  height: auto; /* Maintains the aspect ratio */
+  box-sizing: border-box; /* Includes padding in the total width/height */
+}
+
+.section-zara {
+  background: #ffffff;
+  color: #000000;
+  text-align: left;
+  display: grid;
+  padding: 5px;
+  width: auto;
+  text-align: left;
+  margin-top: 2em;
+  padding-bottom: 10%;
+}
+
+.image-zaraintro {
+  /* Adjust padding as needed */
+  height: 50%;
+  max-width: 60%; /* Prevents the image from exceeding its container width */
+  height: auto; /* Maintains the aspect ratio */
+  box-sizing: border-box; /* Includes padding in the total width/height */
+}
+
+.contact {
+  padding: 5%;
+  background: #fff;
+  display: block;
+  text-align: left;
+}
+.contact-text {
+  font-size: 18px;
+}
+.contact-image {
+  scale: 50%;
+}
+
+/* Pie de página */
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  width: auto;
+  text-align: enter;
+  margin-top: 2em;
 }
