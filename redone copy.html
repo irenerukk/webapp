@@ -10,50 +10,48 @@
     <link rel="stylesheet" href="css/index2.css" />
   </head>
   <!-- cuerpo -->
-  <body class="grid-container">
+  <body>
     <div class="custom-cursor"></div>
     <script src="script.js"></script>
     <!-- encabezado -->
     <header class="header">
       <!-- lista botón y tres estrellas -->
-      <nav>
-        <ul class="nav-list">
-          <li class="menu">
-            <!-- Botón menú proyectos web -->
-            <button class="menu-btn">Web projects</button>
-            <div class="menu-content">
-              <a href="404.html">Error 404</a>
-              <a href="someoutstandingweb.html">Some outstanding webs</a>
-            </div>
-          </li>
-          <li>
-            <img
-              src="Assets/portfolio/blackstar.svg"
-              alt="Imagen Rotando"
-              class="rotating-image"
-            />
-            <a href="#about"> <strong>About Me </strong> </a>
-          </li>
+      <ul class="nav-list">
+        <li class="menu">
+          <!-- Botón menú proyectos web -->
+          <button class="menu-btn">Web projects</button>
+          <div class="menu-content">
+            <a href="404.html">Error 404</a>
+            <a href="someoutstandingweb.html">Some outstanding webs</a>
+          </div>
+        </li>
+        <li>
+          <img
+            src="Assets/portfolio/blackstar.svg"
+            alt="Imagen Rotando"
+            class="rotating-image"
+          />
+          <a href="#about"> <strong>About Me </strong> </a>
+        </li>
 
-          <li>
-            <img
-              src="Assets/portfolio/whitestar.svg"
-              alt="Imagen Rotando"
-              class="rotating-image"
-            />
-            <a href="#work"> <strong>My Work</strong> </a>
-          </li>
+        <li>
+          <img
+            src="Assets/portfolio/whitestar.svg"
+            alt="Imagen Rotando"
+            class="rotating-image"
+          />
+          <a href="#work"> <strong>My Work</strong> </a>
+        </li>
 
-          <li>
-            <img
-              src="Assets/portfolio/blackpunzon.svg"
-              alt="Imagen Rotando"
-              class="rotating-image"
-            />
-            <a href="#contact">Contact Me</a>
-          </li>
-        </ul>
-      </nav>
+        <li>
+          <img
+            src="Assets/portfolio/blackpunzon.svg"
+            alt="Imagen Rotando"
+            class="rotating-image"
+          />
+          <a href="#contact">Contact Me</a>
+        </li>
+      </ul>
     </header>
     <!-- Cascada de letras irenecasenave -->
     <div class="concept concept-eight">
@@ -73,33 +71,31 @@
         <div class="char" data-content="e">e</div>
       </h1>
     </div>
-    <!-- Sección about -->
-    <main>
-      <section class="body">
-        <div class="upper">
-          <img
-            src="Assets/portfolio/yo.jpeg"
-            alt="Irene Casenave"
-            class="profile-image"
-          />
-        </div>
-        <div class="lower-left">
-          <h1 class="highlight">
-            ¡Hola! <br />
-            Soy Irene <br />
-            Casenave
-          </h1>
-        </div>
-        <div class="lower-right">
-          <h3>
-            Soy estudianted de Diseño Audiovisual e Ilustración en UDIT,
-            (Universidad de Diseño, innovación y Tecnología). Durante estos años
-            he aprendido mucho de diferentes disciplinas: ilustración, branding
-            y diseño gráfico.
-          </h3>
-        </div>
-      </section>
-    </main>
+    <!-- Sección about me -->
+    <section class="about-me">
+      <div class="upper">
+        <img
+          src="Assets/portfolio/yo.webp"
+          alt="Irene Casenave"
+          class="profile-image"
+        />
+      </div>
+      <div class="lower-left">
+        <h1 class="highlight">
+          ¡Hola! <br />
+          Soy Irene <br />
+          Casenave
+        </h1>
+      </div>
+      <div class="lower-right">
+        <h1>
+          Soy estudianted de Diseño Audiovisual e Ilustración en UDIT,
+          (Universidad de Diseño, innovación y Tecnología). Durante estos años
+          he aprendido mucho de diferentes disciplinas: ilustración, branding y
+          diseño gráfico.
+        </h1>
+      </div>
+    </section>
 
     <!-- Sección my work -->
     <section class="img-padding">
@@ -108,25 +104,30 @@
 
       <!-- Proyecto 1 -->
       <div class="project-box;">
-        <div class="image-container" onclick="toggleOverlay(this)">
-          <a href="slydin.html">
-            <img src="Assets/portfolio/slydin2.png" alt="Slydin" />
-            <div class="overlay"></div>
-          </a>
-        </div>
+        <img
+          class="image-container img"
+          src="Assets/portfolio/slydin2.webp"
+          alt="Slydin"
+        />
       </div>
 
       <!-- Proyecto 2 -->
       <div class="project-box;">
-        <div class="image-container" onclick="toggleOverlay(this)">
+        <div class="image-container">
           <a href="zarawonder.html">
-            <img src="Assets/portfolio/zara.png" alt="Slydin" />
-            <div class="overlay"></div>
+            <img
+              class="image-container img"
+              src="Assets/portfolio/zara.webp"
+              alt="Zara"
+            />
           </a>
         </div>
       </div>
     </section>
-
+    <br />
+    <br />
+    <br />
+    <br />
     <!-- Slydin' Section -->
     <div class="text-container">
       <div class="animated-text">
@@ -134,88 +135,91 @@
       </div>
     </div>
     <br />
-    <img
-      src="Assets/portfolio/slydin intro.png"
-      alt="Slydin intro"
-      class="slydin-image"
-    />
-
-    <section class="project-grid">
-      <div class="text-style">
-        <h2>
-          <strong>
-            Tus pasos <br />
-            Nuestra historia
-          </strong>
-        </h2>
-        <br />
-        <h5>
-          Slydin’ es una marca de deporte de nieve que tiene como objetivo
-          acompañarte y darte seguridad en tus actividades de montaña.
-        </h5>
-      </div>
-      <div>
-        <img
-          class="image-tarjeta"
-          src="Assets/portfolio/tarjetaslydin.png"
-          alt="Irene Casenave"
-        />
-      </div>
-    </section>
-
-    <!-- Zara Section -->
-    <section class="section-zara">
-      <div class="animated-text">
-        <strong>wonder coast wonder coast wonder coast</strong>
-      </div>
-      <br />
-      <br />
-    </section>
-    <br />
-    <br />
-    <section>
-      <img class="image-zaraintro" src="Assets/portfolio/zaraintro.png" />
-    </section>
-    <br />
-    <section class="proyectodos">
-      <div class="text-zara">
-        <h2>
-          <strong>
-            Endless <br />
-            Sunshine
-          </strong>
-        </h2>
-        <br />
-        <h5>
-          Wonder coast es una cápsula de primavera-verano lanzada por la marca
-          Zara. Su esencia nace del mar Mediterráneo y las diferentes
-          experiencias sensoriales que causa el mismo.
-        </h5>
-      </div>
-      <div>
-        <img class="image-zarados" src="Assets/portfolio/imagendos zara.jpg" />
-      </div>
-    </section>
-    <section>
-      <div class="gif">
-        <img
-          class="image-zaraintro"
-          src="Assets/portfolio/fotobookinterior.gif"
-        />
-      </div>
-    </section>
-    <div class="gif text">
-      En cuanto al fotobook diseñado para la nueva colección de zara, se ha
-      querido transmitir la esencia sensorial y cálida de wonder coast.
+    <div>
+      <img
+        src="Assets/portfolio/slydin intro.webp"
+        alt="Slydin intro"
+        class="slydin-image"
+      />
     </div>
+
+    <section class="grid-container-explanation">
+      <div class="top-section-explanation">
+        <div class="top-column-explanation">
+          <h2>
+            <strong>
+              Tus pasos<br />
+              Nuestra historia
+            </strong>
+          </h2>
+          <br />
+          <p>
+            Slydin’ es una marca de deporte de nieve que tiene como objetivo
+            acompañarte y darte seguridad en tus actividades de montaña.
+          </p>
+        </div>
+        <div class="top-column-explanation">
+          <img
+            class="image-tarjeta"
+            src="Assets/portfolio/tarjetaslydin.webp"
+            alt="Tarjeta Slydin"
+          />
+        </div>
+      </div>
+    </section>
+    <div>
+      <img
+        class="image-cartelas"
+        src="Assets/portfolio/slydin cartelas.webp"
+        alt="Slydin Cartelas"
+      />
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <!-- Zara Section -->
+    <section class="text-container-zara">
+      <div class="animated-text">wonder coast wonder coast</div>
+    </section>
+
+    <section class="zara-grid-container">
+      <div class="zara-top-section">
+        <img
+          class="image-introzara"
+          src="Assets/portfolio/imagen introzara.webp"
+        />
+      </div>
+      <div class="zara-middle-section">
+        <div>
+          <h2>
+            <strong>
+              Endless <br />
+              Sunshine
+            </strong>
+          </h2>
+          <br />
+          <h5>
+            Wonder coast es una cápsula de primavera-verano lanzada por la marca
+            Zara. Su esencia nace del mar Mediterráneo y las diferentes
+            experiencias sensoriales que causa el mismo.
+          </h5>
+        </div>
+
+        <img class="image-zarados" src="Assets/portfolio/imagendos zara.webp" />
+      </div>
+      <div class="zara-bottom-section">
+        <img class="gif" src="Assets/portfolio/fotobookinterior.gif" />
+      </div>
+    </section>
 
     <!-- Contact Section -->
     <section class="contact">
       <div class="contact-text">
-        <strong>
-          Contact me/ <br />
-          Contacta conmigo
-        </strong>
+        <strong
+          >Contact me/ <br />
+          Contacta conmigo</strong
+        >
         <br />
         rrss: irenecasenave <br />
         gmail:irenerukis@gmail.com
@@ -224,7 +228,6 @@
         <img class="contact-image" src="Assets/portfolio/ruedas2.svg" />
       </div>
     </section>
-
     <!-- Footer -->
     <footer class="footer">
       <p>© 2024 Irene Casenave</p>
