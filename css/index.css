@@ -16,12 +16,10 @@
 /* Encabezado */
 .header {
   background: #ffffff;
-  padding: 1px 20%;
   display: flex; /* Activa Flexbox */
   align-items: center;
-  padding-top: 2%;
-  padding-left: 3%;
   cursor: none; /* Esconde el cursor estándar */
+  padding: 10px 3.5%;
 }
 
 /* Rotar */
@@ -47,7 +45,7 @@
   font-family: "Helvetica", sans-serif; /* Usa Helvetica como fuente */
   font-size: 12px;
   max-width: 300%;
-  padding: 5px 10px;
+  padding: 8px 16px;
   border: none;
   border-radius: 26px;
   cursor: pointer;
@@ -69,7 +67,7 @@
 .menu-btn {
   background-color: #191919;
   color: rgb(254, 254, 254);
-  padding: 5px 10px;
+  padding: 6px 12px;
   border: none;
   cursor: pointer;
   border-radius: 20px;
@@ -88,15 +86,15 @@
   border-radius: 5px;
   z-index: 1;
   margin-top: 5px;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .menu-content a {
   color: black;
-  padding: 10px 15px;
+  padding: 12px 10%;
   text-decoration: none;
   display: block;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .menu-content a:hover {
@@ -114,7 +112,7 @@
   align-items: center;
 }
 .nav-list li {
-  margin: -3px;
+  margin: -5px;
 }
 .nav-list a {
   font-weight: bold;
@@ -137,7 +135,6 @@ ul {
   text-align: left;
   padding-top: 4%;
   padding-bottom: 10%;
-  padding-left: -4%;
 }
 .word {
   display: inline-block;
@@ -168,10 +165,9 @@ ul {
   position: relative;
   opacity: 0; /* Inicialmente las letras son invisibles */
   animation: falls 1.5s ease-out forwards;
-  margin-right: 2px; /* Espacio entre las letras */
-  padding-top: 20%;
   word-spacing: -6em;
-  padding-bottom: 0%;
+  margin-right: 5px; /* Slightly increased spacing for readability */
+  padding-top: 5%; /* Reduced for compact view */
 }
 
 .char:nth-child(1) {
@@ -228,14 +224,14 @@ ul {
 
 /* seccion about me */
 .about {
-  background: #ffffff;
   color: #000000;
+  padding: 20px 5%; /* More compact for smaller screens */
 }
 /* Ajustes a la imagen */
 .profile-image {
   height: auto;
-  width: 12em;
-
+  padding: 5px; /* Adds breathing room */
+  width: 10em; /* Slightly smaller for mobile screens */
   align-items: center;
 }
 h1 {
@@ -244,29 +240,29 @@ h1 {
   padding-left: 0.005em;
   max-width: 300px;
   margin: 0;
-  padding-left: 10%;
+  padding-left: 7.5%;
 }
 h2 {
   font-size: 14px;
   letter-spacing: 0.0005em;
-  padding-left: 2em;
-  max-width: 150px;
+  padding-left: 0.2em;
+  width: 90px;
   margin: 0;
   color: #000350;
 }
 h3 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 14px;
-  letter-spacing: 0.0005em;
-  padding-left: 0.1em;
-  max-width: 300px;
+  letter-spacing: 0.00005em;
+  padding-left: 0.00005em;
+  max-width: 800px;
   margin: 0;
   color: #000350;
 }
 h4 {
   font-size: 20px;
   letter-spacing: 0.0005em;
-  padding-left: 0.005em;
+  padding-left: 10px;
   max-width: 300px;
   margin: 0;
   padding-left: 5%;
@@ -274,10 +270,8 @@ h4 {
 h5 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 12px;
-  letter-spacing: 0.0005em;
-  padding-left: 0.05em;
-  max-width: 135px;
-  margin: 0;
+  max-width: 150px;
+  padding-left: px;
   color: #000350;
 }
 
@@ -294,10 +288,10 @@ h5 {
 
 .text-container {
   position: relative;
-  width: 300%; /* Ancho del contenedor */
-  letter-spacing: -1em;
+  width: 90%; /* Ancho del contenedor */
+  letter-spacing: -0.05em;
   overflow: hidden; /* Oculta cualquier parte del texto que salga del contenedor */
-  height: 200px; /* Alto del contenedor */
+  height: 60px; /* Alto del contenedor */
   background-color: #ffffff; /* Color de fondo opcional */
   display: flex;
   align-items: center;
@@ -307,7 +301,8 @@ h5 {
 .animated-text {
   position: absolute;
   white-space: nowrap; /* Evita que el texto haga saltos de línea */
-  font-size: 10em;
+  padding: 5px 0; /* Prevents text from touching edges */
+  font-size: 3em; /* Scaled-down size for mobile screens */
   color: #000000;
   animation: slideIn 7s linear infinite; /* Aplica la animación en loop */
 }
@@ -341,23 +336,22 @@ h5 {
 }
 .slydin {
   align-items: left;
-  padding: 40px 3%;
   background: #000000;
   color: #ffffff;
+  padding: 15px 5%;
 }
 .image-container {
   position: left;
-  width: 36%;
-  height: 36%;
+  width: 35%;
+  height: 35%;
   margin: 0;
   overflow: hidden; /* Es importante para evitar que la imagen sobresalga */
 }
 .project-box {
   background: #ffffff;
-  padding: 1px 5px;
-
+  padding: 20px; /* Balanced padding */
   height: 36%; /* Ajustamos el tamaño de las cajas de proyectos */
-  width: 36%; /* Hacemos que ocupe todo el ancho disponible */
+  width: 50%; /* Hacemos que ocupe todo el ancho disponible */
   text-align: left;
   font-weight: bold;
   border-radius: 10px; /* Esquinas redondeadas */
@@ -368,34 +362,39 @@ h5 {
 .project-grid {
   display: flex;
   background: #ffffff;
-  padding: 10px 3px;
-  padding-left: 25px;
-  height: 100%; /* Ajustamos el tamaño de las cajas de proyectos */
-  width: 200%; /* Hacemos que ocupe todo el ancho disponible */
   text-align: left;
   font-weight: bold;
-  border-radius: 10px; /* Esquinas redondeadas */
-  overflow: hidden; /* Evitar que la imagen se desborde */
+  width: 80%;
+  height: 16%;
+  gap: 0px; /* Space between items */
+  padding: 15px 1%; /* Consistent padding */
+  margin-top: -10px;
 }
 .text-style {
-  padding-top: 10%;
+  padding-top: 7%;
+  padding-left: 3.5%;
+  width: 200px;
+  height: 50px;
 }
 .slydin-image {
-  height: 10%;
+  width: 50%;
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 5px;
 }
 .image-tarjeta {
-  height: 12%;
+  height: 99%;
   width: auto;
-  padding-left: 15%;
+  padding-left: 3%;
 }
 .body {
   margin: 0;
-  height: 60vh; /* Full viewport height */
+
   display: grid;
   grid-template-rows: 1fr 2fr; /* Upper part takes 1/3, lower part 2/3 */
-  gap: 40px;
+  gap: 30px;
   grid-template-columns: 1fr 1fr; /* Two equal columns in lower part */
   align-items: center;
+  padding-left: 18px;
 }
 
 .upper {
@@ -412,18 +411,22 @@ h5 {
   align-items: center;
   justify-content: center;
   font-size: 24px;
+  padding-top: 40%;
 }
 
 .lower-right {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 22px;
+  padding-top: 40%;
 }
+
 .img-padding {
-  padding: 25px; /* Adjust padding as needed */
+  padding: 24px 18px; /* Adjust padding as needed */
+  padding-top: 0px;
   display: auto; /* Ensures the image respects padding */
-  max-width: 140%; /* Prevents the image from exceeding its container width */
+  max-width: 100%; /* Prevents the image from exceeding its container width */
   height: auto; /* Maintains the aspect ratio */
   box-sizing: border-box; /* Includes padding in the total width/height */
 }
@@ -444,22 +447,20 @@ h5 {
 }
 .image-cartelas {
   /* Adjust padding as needed */
-  display: auto; /* Ensures the image respects padding */
+
   max-width: 50%; /* Prevents the image from exceeding its container width */
   height: auto; /* Maintains the aspect ratio */
-  box-sizing: border-box; /* Includes padding in the total width/height */
 }
 
 .section-zara {
   background: #ffffff;
   color: #000000;
   text-align: left;
-  display: grid;
-  padding: 5px;
+  display: flex;
   width: auto;
   text-align: left;
   margin-top: 2em;
-  padding-bottom: 10%;
+  padding: 20px 5%;
 }
 
 .image-zaraintro {
@@ -470,17 +471,42 @@ h5 {
   box-sizing: border-box; /* Includes padding in the total width/height */
 }
 
+.proyectodos {
+  display: flex;
+}
+
+.text-zara {
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+.image-zarados {
+  height: 25%;
+  padding-left: 18%;
+}
+.gif {
+  height: 80%;
+  padding-right: 40%;
+}
+.gif text {
+  font-size: 12px;
+}
 .contact {
-  padding: 5%;
+  margin: 0;
+  height: auto;
+  display: flex;
   background: #fff;
-  display: block;
   text-align: left;
+  padding-top: 10%;
 }
 .contact-text {
-  font-size: 18px;
+  font-size: 12px;
+  padding-left: 3%;
 }
 .contact-image {
-  scale: 50%;
+  height: 70%;
+  padding-left: 5%;
+  padding-bottom: 70%;
 }
 
 /* Pie de página */
@@ -488,8 +514,11 @@ h5 {
   background: #333;
   color: #fff;
   text-align: center;
-  padding: 5px;
   width: auto;
   text-align: enter;
-  margin-top: 2em;
+  padding: 15px 5%; /* More vertical padding for clarity */
+}
+section {
+  margin: 0; /* Reset default margins */
+  padding: 20px 0; /* Apply consistent spacing */
 }
