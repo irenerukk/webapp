@@ -2,13 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=390, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="./css/portfolio.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, height=auto, user-scalable=no"
+    />
+    <title>irenecasenave-portfolio</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/media-queries.css" />
     <link
-      rel="stylesheet"
-      href="css/media-queries.css"
-      media="screen and (max-width: 768px)"
+      rel="icon"
+      href="Assets/pineapple-svgrepo-com.svg"
+      type="image/x-icon"
     />
   </head>
   <!-- cuerpo -->
@@ -18,56 +22,45 @@
     <!-- encabezado -->
     <header class="header">
       <!-- lista botón y tres estrellas -->
-      <nav>
-        <ul class="nav-list">
-          <li class="menu">
-            <!-- Botón menú proyectos web -->
-            <button class="menu-btn">Web projects</button>
-            <div class="menu-content">
-              <a href="404.html">Error 404</a>
-              <a href="someoutstandingweb.html">Some outstanding webs</a>
-            </div>
-          </li>
-          <li>
-            <img
-              src="Assets/portfolio/blackstar.svg"
-              alt="Imagen Rotando"
-              class="rotating-image"
-              width="30"
-              height="30"
-            />
-            <a href="#about"> <strong>About Me </strong> </a>
-          </li>
+      <ul class="nav-list">
+        <li class="menu">
+          <!-- Botón menú proyectos web -->
+          <button class="menu-btn">Web projects</button>
+          <div class="menu-content">
+            <a href="404.html">Error 404</a>
+            <a href="someoutstandingweb.html">Some outstanding webs</a>
+          </div>
+        </li>
+        <li>
+          <img
+            src="Assets/portfolio/blackstar.svg"
+            alt="Imagen Rotando"
+            class="rotating-image"
+          />
+          <a href="#about"> <strong>About Me </strong> </a>
+        </li>
 
-          <li>
-            <img
-              src="Assets/portfolio/whitestar.svg"
-              alt="Imagen Rotando"
-              class="rotating-image"
-              width="30"
-              height="30"
-            />
-            <a href="#work"> <strong>My Work</strong> </a>
-          </li>
+        <li>
+          <img
+            src="Assets/portfolio/whitestar.svg"
+            alt="Imagen Rotando"
+            class="rotating-image"
+          />
+          <a href="#work"> <strong>My Work</strong> </a>
+        </li>
 
-          <li>
-            <img
-              src="Assets/portfolio/blackpunzon.svg"
-              alt="Imagen Rotando"
-              class="rotating-image"
-              width="30"
-              height="30"
-            />
-            <a href="#contact">Contact Me</a>
-          </li>
-        </ul>
-      </nav>
+        <li>
+          <img
+            src="Assets/portfolio/blackpunzon.svg"
+            alt="Imagen Rotando"
+            class="rotating-image"
+          />
+          <a href="#contact"><strong>Contact Me</strong></a>
+        </li>
+      </ul>
     </header>
     <!-- Cascada de letras irenecasenave -->
-    <div
-      style="padding-top: 10%; word-spacing: -5em; padding-bottom: 15%"
-      class="concept concept-eight"
-    >
+    <div class="concept concept-eight">
       <h1 class="word">
         <div class="char" data-content="i">i</div>
         <div class="char" data-content="r">r</div>
@@ -84,96 +77,162 @@
         <div class="char" data-content="e">e</div>
       </h1>
     </div>
-
-    <main>
-      <!-- Sección about me -->
-      <section id="about" class="about">
+    <!-- Sección about me -->
+    <section id="about" class="about-me">
+      <div class="upper">
         <img
-          src="Assets/portfolio/yo.jpeg"
+          src="Assets/portfolio/yo.webp"
           alt="Irene Casenave"
           class="profile-image"
         />
+      </div>
+      <div class="lower-left">
+        <h1 class="highlight">
+          ¡Hola! <br />
+          Soy Irene <br />
+          Casenave
+        </h1>
+      </div>
+      <div class="lower-right">
+        <h1>
+          Soy estudianted de Diseño Audiovisual e Ilustración en UDIT,
+          (Universidad de Diseño, innovación y Tecnología). Durante estos años
+          he aprendido mucho de diferentes disciplinas: ilustración, branding y
+          diseño gráfico.
+        </h1>
+      </div>
+    </section>
 
-        <div class=".textosaludo">
-          <h5>¡Hola! Me llamo</h5>
+    <!-- Sección my work -->
+    <h4>Mis proyectos/ my work</h4>
+    <section id="work" class="img-padding">
+      <!-- Proyecto 1 -->
+      <div class="project-box;">
+        <img
+          class="image-container img"
+          src="Assets/portfolio/slydin2.webp"
+          alt="Slydin"
+        />
+      </div>
 
-          <h1 class="highlight">
-            Irene <br />
-            Casenave
-          </h1>
-          <br />
-
-          <br /><br />
-          <h3>
-            Soy estudianted de Diseño Audiovisual e Ilustración en UDIT,
-            (Universidad de Diseño, innovación y Tecnología). Durante estos años
-            he aprendido mucho de diferentes disciplinas: ilustración, edición
-            de video, animación 2D, branding y diseño gráfico.
-          </h3>
-          <br />
-          <h3>
-            presento aquí los mejores trabajos de branding que he realizado en
-            estos dos últimos años.
-          </h3>
+      <!-- Proyecto 2 -->
+      <div class="project-box;">
+        <div class="image-container">
+          <a href="zarawonder.html">
+            <img
+              class="image-container img"
+              src="Assets/portfolio/zara.webp"
+              alt="Zara"
+            />
+          </a>
         </div>
-      </section>
-      <br />
-      <br />
-      <!-- Sección my work -->
-      <section id="work" class="work">
-        <strong> My Work / </strong>
-        <strong> Mis proyectos </strong>
-        <br />
+      </div>
+    </section>
+    <br />
+    <br />
+    <br />
+    <br />
+    <!-- Slydin' Section -->
+    <div class="text-container">
+      <div class="animated-text">
+        Slydin' Slydin' Slydin' Slydin' Slydin' Slydin'
+      </div>
+    </div>
+    <br />
+    <div>
+      <img
+        src="Assets/portfolio/slydin intro.webp"
+        alt="Slydin intro"
+        class="slydin-image"
+      />
+    </div>
 
-        <div class="projects-grid">
-          <!-- Proyecto 1 -->
-          <div class="project-box;">
-            <div class="image-container" onclick="toggleOverlay(this)">
-              <a href="slydin.html">
-                <img
-                  style="height: 70%; height: 70%"
-                  src="Assets/portfolio/slydin2.png"
-                  alt="Slydin"
-                />
-                <div class="overlay"></div>
-              </a>
-            </div>
-          </div>
-          <!-- Proyecto 2 -->
-          <div class="project-box;">
-            <div class="image-container" onclick="toggleOverlay(this)">
-              <a href="zarawonder.html">
-                <img
-                  style="height: 70%; height: 70%"
-                  src="Assets/portfolio/zara.png"
-                  alt="Slydin"
-                />
-                <div class="overlay"></div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section class="contact">
-        <span
-          ><div>
+    <section class="grid-container-explanation">
+      <div class="top-section-explanation">
+        <div class="top-column-explanation">
+          <h2>
             <strong>
-              Contact me/ <br />
-              Contacta conmigo <br />
+              Tus pasos<br />
+              Nuestra historia
             </strong>
-            rrss: irenecasenave <br />
-            gmail:irenerukis@gmail.com
-          </div>
-        </span>
-
-        <div>
-          <img class="contact-image" src="Assets/portfolio/ruedas2.svg" />
+          </h2>
+          <br />
+          <p>
+            Slydin’ es una marca de deporte de nieve que tiene como objetivo
+            acompañarte y darte seguridad en tus actividades de montaña.
+          </p>
         </div>
-      </section>
-    </main>
+        <div class="top-column-explanation">
+          <img
+            class="image-tarjeta"
+            src="Assets/portfolio/tarjetaslydin.webp"
+            alt="Tarjeta Slydin"
+          />
+        </div>
+      </div>
+    </section>
+    <div>
+      <img
+        class="image-cartelas"
+        src="Assets/portfolio/slydin cartelas.webp"
+        alt="Slydin Cartelas"
+      />
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <!-- Zara Section -->
+    <section class="text-container-zara">
+      <div class="animated-text">wonder coast wonder coast</div>
+    </section>
+    <br />
+    <section class="zara-grid-container">
+      <div class="zara-top-section">
+        <img
+          class="image-introzara"
+          src="Assets/portfolio/imagen introzara.webp"
+        />
+      </div>
+      <div class="zara-middle-section">
+        <div>
+          <h2>
+            <strong>
+              Endless <br />
+              Sunshine
+            </strong>
+          </h2>
+          <br />
+          <p>
+            Wonder coast es una cápsula de primavera-verano lanzada por la marca
+            Zara. Su esencia nace del mar Mediterráneo y las diferentes
+            experiencias sensoriales que causa el mismo.
+          </p>
+        </div>
 
+        <img class="image-zarados" src="Assets/portfolio/imagendos zara.webp" />
+      </div>
+      <div class="zara-bottom-section">
+        <img class="gif" src="Assets/portfolio/fotobookinterior.gif" />
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="contact-text">
+        <strong
+          >Contact me/ <br />
+          Contacta conmigo</strong
+        >
+        <br />
+        rrss: irenecasenave <br />
+        gmail:irenerukis@gmail.com
+      </div>
+      <div>
+        <img class="contact-image" src="Assets/portfolio/ruedas2.svg" />
+      </div>
+    </section>
     <!-- Footer -->
     <footer class="footer">
       <p>© 2024 Irene Casenave</p>

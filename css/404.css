@@ -1,31 +1,80 @@
-body {
-  align-items: center;
-  height: 100vh;
+* {
   margin: 0;
-  text-align: center;
-  background: #0d0d0d;
-  overflow: hidden;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: "Oswald", sans-serif;
+  background-color: #000000;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+}
+header {
+  height: 100%;
+  width: 100%;
+  display: grid; /* Activa Flexbox */
+  cursor: none; /* Esconde el cursor estándar */
+  padding: 5%;
+  align-items: center;
+  justify-content: center;
 }
 
-.header {
-  background: #ffffff;
-  padding: 5px 5%;
-  display: flex; /* Activa Flexbox */
+.nav-list {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  grid-template-columns: 7em 6em 6em 6em;
+  grid-template-rows: auto;
+  gap: 2%;
+  max-width: 100%;
+  flex-direction: row;
+}
+.nav-list li {
+  display: grid;
   align-items: center;
-  cursor: none; /* Esconde el cursor estándar */
 }
-.parallax {
-  background-image: linear-gradient(
-    135deg,
-    #001f3f,
-    #0074d9
-  ); /* Degradado negro a azul */
-  background-attachment: fixed; /* Parallax effect */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.nav-list a {
+  display: block;
+  color: #ffffff;
+  font-weight: bold;
+  align-items: center;
+  font-weight: bold;
+  font-size: 2em;
+  align-items: center;
 }
+/* Ajustes listas y links */
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: Arial, Helvetica, sans-serif;
+}
+ul {
+  list-style: none;
+}
+
+/* Botones */
+.button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-family: "Helvetica", sans-serif; /* Usa Helvetica como fuente */
+  white-space: nowrap;
+  padding: 1vw 2vw;
+  border-radius: 28vw;
+  cursor: pointer;
+  font-size: 0.7em;
+  transition: background-color 0.3s, color 0.3s;
+}
+/* Cambio de color al hacer hover */
+
+/* Rotar */
 @keyframes rotate {
   0% {
     transform: rotate(0deg); /* Comienza sin rotación */
@@ -36,107 +85,49 @@ body {
 }
 
 .rotating-image {
-  width: 30; /* Puedes ajustar el tamaño de la imagen */
-  height: 30;
+  display: none;
+  width: 6vw; /* Puedes ajustar el tamaño de la imagen */
+  height: 6vw;
   animation: rotate 4s linear infinite; /* Aplica la animación de rotación */
 }
 
-.button {
-  background-color: black;
-  color: white;
-  font-family: "Helvetica", sans-serif; /* Usa Helvetica como fuente */
-  font-size: 16px;
-  max-width: 900px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 26px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s; /* Transición suave para el hover */
+strong {
+  color: #ffffff; /* Color azul oscuro */
+  text-align: left;
+  justify-content: center;
 }
 
-.menu {
-  position: relative;
-  display: inline-block;
-}
-
-.menu-btn {
-  background-color: #191919;
-  color: rgb(254, 254, 254);
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.menu-btn:hover {
-  background-color: #8b8b8b;
-  color: #000;
-}
-
-.menu-content {
-  display: none; /* Ocultamos el menú inicialmente */
-  position: absolute;
-  background-color: white;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  z-index: 1;
-  margin-top: 5px;
-}
-
-.menu-content a {
-  color: black;
-  padding: 10px 15px;
-  text-decoration: none;
-  display: block;
-}
-
-.menu-content a:hover {
-  background-color: #f1f1f1;
-}
-
-/* Mostrar el menú cuando se hace hover */
-.menu:hover .menu-content {
-  display: block;
-}
-
+/* Estilo de enlaces */
 a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.nav-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-list li {
-  margin: 0 10px;
-}
-
-.nav-list a {
-  font-weight: bold;
-  font-size: 5px;
-  align-items: center;
-}
-
-.container {
-  position: relative;
+  color: #000000; /* Color azul brillante */
+  font-size: 1.5em;
   text-align: center;
+}
+a:hover {
+  text-decoration: dashed;
+}
+
+.dust-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 20%;
 }
 
 .dust-text {
+  padding: 20%;
   font-size: 5rem;
   font-weight: bold;
-  color: white;
-  position: relative;
-  animation: dust-animation 3s ease-in-out forwards;
-  filter: blur(4px);
+  color: #ffffff;
+  text-transform: uppercase;
+  filter: blur(20px);
   opacity: 0;
-  padding-top: 20%;
+  animation: dust-animation 4s ease-in-out forwards;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 255, 255, 0.4);
 }
 
-/* Keyframes for the dust effect */
+/* Animación de polvo */
 @keyframes dust-animation {
   0% {
     filter: blur(20px);
@@ -168,293 +159,60 @@ a {
   }
 }
 
-/* Optional Particle Simulation */
-.container::before {
-  content: "";
+/* go home*/
+.text-container {
+  margin-top: auto; /* Pushes the footer to the bottom */
+  padding-top: 10%;
+  position: relative;
+  width: 100%; /* Ancho del contenedor */
+  overflow: hidden; /* Oculta cualquier parte del texto que salga del contenedor */
+  height: 60px; /* Alto del contenedor */
+  display: flex;
+  align-items: center;
+}
+
+.animated-text {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(0, 0, 0, 0) 70%
-  );
-  animation: dust-particles 30s ease-out infinite;
-}
-
-@keyframes dust-particles {
-  20%,
-  100% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  50% {
-    opacity: 0;
-    transform: translateY(0);
-  }
-}
-
-/* Animación para escribir el texto */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%; /* Depende del tamaño del texto */
-  }
-}
-.typewriter-container {
-  display: inline-block;
+  white-space: nowrap; /* Evita que el texto haga saltos de línea */
+  padding: 6% 0; /* Prevents text from touching edges */
+  font-size: 2em; /* Scaled-down size for mobile screens */
   color: #ffffff;
-  overflow: hidden;
-  white-space: nowrap; /* Mantiene el texto en una línea */
-  border-right: 2px solid #ffffff; /* Simula el cursor */
-  font-size: 2rem;
-  animation: typing 2s steps(30, end), blink-cursor 0.6s step-end infinite;
+  animation: slideIn 5s linear infinite;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
+@keyframes slideIn {
+  0% {
+    transform: translateX(
+      100vw
+    ); /* Comienza fuera de la pantalla a la derecha */
   }
-  to {
-    width: 40%; /* Depende del tamaño del texto */
+
+  100% {
+    transform: translateX(-100vw); /* Sale completamente a la izquierda */
   }
 }
-
-/* Animación para parpadeo del cursor */
-@keyframes blink-cursor {
-  50% {
-    border-color: transparent;
-  }
+/* Aplicación de la animación a un elemento */
+.elemento {
+  animation: slideIn 30s ease-in-out infinite; /* 3 segundos de duración, animación continua */
 }
 
-/* Media Queries para móviles en landscape */
-/* Mobile Portrait */
-@media only screen and (max-width: 600px) and (orientation: portrait) {
-  body {
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    text-align: center;
-    background: #0d0d0d;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-  }
+.img-smily {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scale: 60%;
+  filter: blur(2px);
+}
 
-  .header {
-    background: #ffffff;
-    padding: 5px 5%;
-    display: flex; /* Activa Flexbox */
-    align-items: center;
-    padding-inline: 4px;
-    cursor: none; /* Esconde el cursor estándar */
-  }
-
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg); /* Comienza sin rotación */
-    }
-    100% {
-      transform: rotate(360deg); /* Gira 360 grados */
-    }
-  }
-
-  .rotating-image {
-    width: 20px; /* Puedes ajustar el tamaño de la imagen */
-    height: 20px;
-    animation: rotate 4s linear infinite; /* Aplica la animación de rotación */
-  }
-
-  .button {
-    background-color: black;
-    color: white;
-    font-family: "Helvetica", sans-serif; /* Usa Helvetica como fuente */
-    font-size: 12px;
-    max-width: 900px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 26px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Transición suave para el hover */
-  }
-
-  .menu {
-    position: relative;
-    display: inline-block;
-  }
-
-  .menu-btn {
-    background-color: #191919;
-    color: rgb(254, 254, 254);
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-
-  .menu-btn:hover {
-    background-color: #8b8b8b;
-    color: #000;
-  }
-
-  .menu-content {
-    display: none; /* Ocultamos el menú inicialmente */
-    position: absolute;
-    background-color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    z-index: 1;
-    margin-top: 5px;
-  }
-
-  .menu-content a {
-    color: black;
-    padding: 10px 15px;
-    text-decoration: none;
-    display: block;
-  }
-
-  .menu-content a:hover {
-    background-color: #f1f1f1;
-  }
-
-  /* Mostrar el menú cuando se hace hover */
-  .menu:hover .menu-content {
-    display: block;
-  }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .nav-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nav-list li {
-    margin: 15px 10px;
-  }
-
-  .nav-list a {
-    font-weight: bold;
-    font-size: 12px;
-    align-items: center;
-  }
-
-  .container {
-    position: relative;
-    text-align: center;
-  }
-
-  .dust-text {
-    font-size: 5rem;
-    font-weight: bold;
-    color: white;
-    position: relative;
-    animation: dust-animation 3s ease-in-out forwards;
-    filter: blur(4px);
-    opacity: 0;
-    padding-top: 20%;
-  }
-
-  /* Keyframes for the dust effect */
-  @keyframes dust-animation {
-    0% {
-      filter: blur(20px);
-      opacity: 0;
-      transform: scale(1.2);
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-        0 0 30px rgba(255, 255, 255, 0.4);
-    }
-    30% {
-      opacity: 0.5;
-      filter: blur(10px);
-      text-shadow: 0 0 15px rgba(255, 255, 255, 0.6),
-        0 0 50px rgba(255, 255, 255, 0.3);
-      transform: scale(1.1);
-    }
-    70% {
-      filter: blur(4px);
-      opacity: 1;
-      text-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
-        0 0 15px rgba(255, 255, 255, 0.5);
-      transform: scale(1.02);
-    }
-    100% {
-      filter: blur(0);
-      text-shadow: 0 0 2px rgba(255, 255, 255, 1),
-        0 0 10px rgba(255, 255, 255, 0.7);
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
-  /* Optional Particle Simulation */
-  .container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(
-      circle,
-      rgba(255, 255, 255, 0.1) 0%,
-      rgba(0, 0, 0, 0) 70%
-    );
-    animation: dust-particles 30s ease-out infinite;
-  }
-
-  @keyframes dust-particles {
-    20%,
-    100% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    50% {
-      opacity: 0;
-      transform: translateY(0);
-    }
-  }
-
-  /* Animación para escribir el texto */
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%; /* Depende del tamaño del texto */
-    }
-  }
-  .typewriter-container {
-    display: inline-block;
-    color: #ffffff;
-    overflow: hidden;
-    white-space: nowrap; /* Mantiene el texto en una línea */
-    border-right: 2px solid #ffffff; /* Simula el cursor */
-    font-size: 1rem;
-    animation: typing 2s steps(30, end), blink-cursor 0.6s step-end infinite;
-  }
-
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 40%; /* Depende del tamaño del texto */
-    }
-  }
-
-  /* Animación para parpadeo del cursor */
-  @keyframes blink-cursor {
-    50% {
-      border-color: transparent;
-    }
-  }
+.footer {
+  background: #000000;
+  color: #ffffff;
+  text-align: center;
+  width: auto;
+  text-align: enter;
+  font-size: 0.8em;
+  font-weight: 100;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 5%;
+  padding: 10px;
 }

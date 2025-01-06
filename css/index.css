@@ -1,5 +1,13 @@
-@import "media-queries.css";
-@import "base.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: "Oswald", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
 
 /* Ajustes de cursor */
 .custom-cursor {
@@ -16,10 +24,100 @@
 /* Encabezado */
 .header {
   background: #ffffff;
-  display: flex; /* Activa Flexbox */
-  align-items: center;
+  display: grid; /* Activa Flexbox */
   cursor: none; /* Esconde el cursor estándar */
-  padding: 10px 3.5%;
+  justify-content: center;
+}
+
+.nav-list {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  grid-template-columns: 9em 3em 3em 3em;
+  grid-template-rows: auto;
+  gap: 10%;
+  max-width: 100%;
+  flex-direction: row;
+}
+.nav-list li {
+  display: grid;
+  align-items: center;
+}
+.nav-list a {
+  color: #000000;
+  font-weight: bold;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  align-items: center;
+}
+/* Ajustes listas y links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu {
+  display: grid;
+}
+.menu-btn {
+  background-color: #191919;
+  color: rgb(254, 254, 254);
+  padding: 2.5vw 5vw;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  border-radius: 20vw;
+  padding: 6px 12px;
+}
+.menu-content {
+  display: none; /* Ocultamos el menú inicialmente */
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0vw 4% 6% rgba(0, 0, 0, 0.2);
+  border-radius: 2vw;
+  z-index: 1;
+  margin-top: 30%;
+  padding: 5%;
+  max-width: 25%;
+}
+.menu-content a {
+  color: rgb(255, 255, 255);
+  padding: 3%;
+  text-decoration: wavy;
+  display: block;
+}
+.menu-btn:hover {
+  background-color: #8b8b8b;
+  color: #000;
+}
+/* Mostrar el menú cuando se hace hover */
+.menu:hover .menu-content {
+  display: block;
+}
+
+/* Botones */
+.button {
+  background-color: black;
+  color: white;
+  font-family: "Helvetica", sans-serif; /* Usa Helvetica como fuente */
+  font-size: 1em;
+  max-width: 300vw;
+  padding: 8vw 16vw;
+  border: none;
+  border-radius: 26vw;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Transición suave para el hover */
+}
+/* Cambio de color al hacer hover */
+.button:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
 }
 
 /* Rotar */
@@ -33,114 +131,22 @@
 }
 
 .rotating-image {
-  width: 25px; /* Puedes ajustar el tamaño de la imagen */
-  height: 25px;
+  width: 10vw; /* Puedes ajustar el tamaño de la imagen */
+  height: 10vw;
   animation: rotate 4s linear infinite; /* Aplica la animación de rotación */
 }
 
-/* Botones */
-.button {
-  background-color: black;
-  color: white;
-  font-family: "Helvetica", sans-serif; /* Usa Helvetica como fuente */
-  font-size: 12px;
-  max-width: 300%;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 26px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s; /* Transición suave para el hover */
-}
-/* Cambio de color al hacer hover */
-.button:hover {
-  background-color: rgb(255, 255, 255);
-  color: black;
-}
-
-/* Boton Encabezado Menu opciones */
-.menu {
-  position: relative;
-  display: inline-block;
-  padding-right: 40px;
-}
-
-.menu-btn {
-  background-color: #191919;
-  color: rgb(254, 254, 254);
-  padding: 6px 12px;
-  border: none;
-  cursor: pointer;
-  border-radius: 20px;
-}
-
-.menu-btn:hover {
-  background-color: #8b8b8b;
-  color: #000;
-}
-
-.menu-content {
-  display: none; /* Ocultamos el menú inicialmente */
-  position: absolute;
-  background-color: white;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  z-index: 1;
-  margin-top: 5px;
-  font-size: 22px;
-}
-
-.menu-content a {
-  color: black;
-  padding: 12px 10%;
-  text-decoration: none;
-  display: block;
-  font-size: 22px;
-}
-
-.menu-content a:hover {
-  background-color: #f1f1f1;
-}
-
-/* Mostrar el menú cuando se hace hover */
-.menu:hover .menu-content {
-  display: block;
-}
-
-.nav-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav-list li {
-  margin: -5px;
-}
-.nav-list a {
-  font-weight: bold;
-  font-size: 15px;
-
-  align-items: center;
-}
-/* Ajustes listas y links */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-/* Estilo inicial */
-.concept-eight {
-  text-align: left;
-  padding-top: 4%;
-  padding-bottom: 10%;
-}
 .word {
   display: inline-block;
   white-space: nowrap; /* Para que las letras estén en una sola línea */
 }
 
+.concept-eight {
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  padding: 30%;
+}
 /* Cuerpo */
 /* irenecasenave cascada */
 @keyframes falls {
@@ -222,179 +228,13 @@ ul {
   animation-delay: 2.5s;
 }
 
-/* seccion about me */
-.about {
-  color: #000000;
-  padding: 20px 5%; /* More compact for smaller screens */
-}
-/* Ajustes a la imagen */
-.profile-image {
-  height: auto;
-  padding: 5px; /* Adds breathing room */
-  width: 10em; /* Slightly smaller for mobile screens */
-  align-items: center;
-}
-h1 {
-  font-size: 20px;
-  letter-spacing: 0.0005em;
-  padding-left: 0.005em;
-  max-width: 300px;
+.about-me {
   margin: 0;
-  padding-left: 7.5%;
-}
-h2 {
-  font-size: 14px;
-  letter-spacing: 0.0005em;
-  padding-left: 0.2em;
-  width: 90px;
-  margin: 0;
-  color: #000350;
-}
-h3 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.00005em;
-  padding-left: 0.00005em;
-  max-width: 800px;
-  margin: 0;
-  color: #000350;
-}
-h4 {
-  font-size: 20px;
-  letter-spacing: 0.0005em;
-  padding-left: 10px;
-  max-width: 300px;
-  margin: 0;
-  padding-left: 5%;
-}
-h5 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 12px;
-  max-width: 150px;
-  padding-left: px;
-  color: #000350;
-}
-
-.textosaludo {
-  font-size: 16px;
-  padding: 20px;
-}
-
-.highlight {
-  font-weight: bold;
-  align-items: center;
-  color: #000350;
-}
-
-.text-container {
-  position: relative;
-  width: 90%; /* Ancho del contenedor */
-  letter-spacing: -0.05em;
-  overflow: hidden; /* Oculta cualquier parte del texto que salga del contenedor */
-  height: 60px; /* Alto del contenedor */
-  background-color: #ffffff; /* Color de fondo opcional */
-  display: flex;
-  align-items: center;
-}
-
-/* Texto animado */
-.animated-text {
-  position: absolute;
-  white-space: nowrap; /* Evita que el texto haga saltos de línea */
-  padding: 5px 0; /* Prevents text from touching edges */
-  font-size: 3em; /* Scaled-down size for mobile screens */
-  color: #000000;
-  animation: slideIn 7s linear infinite; /* Aplica la animación en loop */
-}
-@keyframes slideIn {
-  0% {
-    transform: translateX(50%); /* Comienza fuera de la pantalla a la derecha */
-  }
-
-  100% {
-    transform: translateX(-100%); /* Sale completamente a la izquierda */
-  }
-}
-/* Aplicación de la animación a un elemento */
-.elemento {
-  animation: slideIn 3s ease-in-out infinite; /* 3 segundos de duración, animación continua */
-}
-
-/* Aplicación de la animación a un elemento */
-.elemento {
-  animation: slideIn 3s ease-in-out infinite; /* 3 segundos de duración, animación continua */
-}
-
-.proyectouno {
-  display: inline;
-}
-
-.about {
-  align-items: center;
-  padding: 50px 5%;
-  color: #ffffff;
-}
-.slydin {
-  align-items: left;
-  background: #000000;
-  color: #ffffff;
-  padding: 15px 5%;
-}
-.image-container {
-  position: left;
-  width: 35%;
-  height: 35%;
-  margin: 0;
-  overflow: hidden; /* Es importante para evitar que la imagen sobresalga */
-}
-.project-box {
-  background: #ffffff;
-  padding: 20px; /* Balanced padding */
-  height: 36%; /* Ajustamos el tamaño de las cajas de proyectos */
-  width: 50%; /* Hacemos que ocupe todo el ancho disponible */
-  text-align: left;
-  font-weight: bold;
-  border-radius: 10px; /* Esquinas redondeadas */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Agregamos sombra */
-  overflow: hidden; /* Evitar que la imagen se desborde */
-}
-
-.project-grid {
-  display: flex;
-  background: #ffffff;
-  text-align: left;
-  font-weight: bold;
-  width: 80%;
-  height: 16%;
-  gap: 0px; /* Space between items */
-  padding: 15px 1%; /* Consistent padding */
-  margin-top: -10px;
-}
-.text-style {
-  padding-top: 7%;
-  padding-left: 3.5%;
-  width: 200px;
-  height: 50px;
-}
-.slydin-image {
-  width: 50%;
-  height: auto; /* Maintain aspect ratio */
-  margin-top: 5px;
-}
-.image-tarjeta {
-  height: 99%;
-  width: auto;
-  padding-left: 3%;
-}
-.body {
-  margin: 0;
-
   display: grid;
-  grid-template-rows: 1fr 2fr; /* Upper part takes 1/3, lower part 2/3 */
-  gap: 30px;
+  min-height: 40%;
+  grid-template-rows: 1fr 1fr; /* Upper part takes 1/3, lower part 2/3 */
   grid-template-columns: 1fr 1fr; /* Two equal columns in lower part */
   align-items: center;
-  padding-left: 18px;
 }
 
 .upper {
@@ -402,123 +242,226 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
   font-family: Arial, sans-serif;
+}
+
+.profile-image {
+  width: 20em; /* Slightly smaller for mobile screens */
+  align-items: center;
 }
 
 .lower-left {
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-size: 24px;
-  padding-top: 40%;
+  font-size: 1em;
 }
 
 .lower-right {
   display: flex;
+  justify-content: center;
+  max-width: 75%;
+}
+.img-padding {
+  display: block;
+  padding: 2%;
+  box-sizing: border-box;
+}
+
+.project-box {
+  background: #ffffff;
+  box-shadow: 0 2vw 5vw rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.image-container {
+  width: 100%;
+  aspect-ratio: 1.15 / 1; /* Mantiene proporción fija (opcional) */
+  margin: 0;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-container {
+  position: relative;
+  width: 100%; /* Ancho del contenedor */
+  letter-spacing: -0.25em;
+  overflow: hidden; /* Oculta cualquier parte del texto que salga del contenedor */
+  height: 60px; /* Alto del contenedor */
+  background-color: #ffffff; /* Color de fondo opcional */
+  display: flex;
+  align-items: center;
+}
+
+/* Texto animado slydin*/
+.animated-text {
+  position: absolute;
+  white-space: nowrap; /* Evita que el texto haga saltos de línea */
+  padding: 2% 0; /* Prevents text from touching edges */
+  font-size: 4em; /* Scaled-down size for mobile screens */
+  color: #000000;
+  animation: slideIn 7s linear infinite;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(
+      100vw
+    ); /* Comienza fuera de la pantalla a la derecha */
+  }
+
+  100% {
+    transform: translateX(-100vw); /* Sale completamente a la izquierda */
+  }
+}
+/* Aplicación de la animación a un elemento */
+.elemento {
+  animation: slideIn 3s ease-in-out infinite; /* 3 segundos de duración, animación continua */
+}
+
+.slydin-image {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.image-tarjeta {
+  height: 16em;
+}
+
+h2 {
+  letter-spacing: 0.0005em;
+  font-family: "oswald";
+  margin: 0;
+  color: #000350;
+}
+h4 {
+  padding-left: 35%;
+  justify-content: center;
+  align-items: center;
+}
+
+#about {
+  color: #000000;
+}
+#work {
+  color: #000000;
+}
+#contact {
+  color: #000000;
+}
+
+.grid-container-explanation {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: auto; /* Height adjusts automatically based on content */
+}
+
+/* Top section */
+.top-section-explanation {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 12em 1fr; /* Two columns inside the top section */
+  grid-template-rows: auto; /* Height adjusts automatically based on content */
+  gap: 15%; /* Adjusted gap to pixels for consistency */
+  padding: 2rem 1rem; /* Adjusted padding using rem units for better scaling */
+}
+
+/* Column within the top section */
+.top-column-explanation {
+  color: rgb(0, 0, 0);
+  width: 100%;
+  text-align: left;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  align-items: center;
+  padding: 0 1rem; /* Optional padding for text */
+}
+
+.image-cartelas {
+  max-width: 100%;
+}
+
+.text-container-zara {
+  position: relative;
+  padding: 1%;
+  width: 100%; /* Ancho del contenedor */
+  letter-spacing: -0.05em;
+  overflow: hidden; /* Oculta cualquier parte del texto que salga del contenedor */
+  height: 60px; /* Alto del contenedor */
+  background-color: #ffffff; /* Color de fondo opcional */
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
-  padding-top: 40%;
 }
 
-.img-padding {
-  padding: 24px 18px; /* Adjust padding as needed */
-  padding-top: 0px;
-  display: auto; /* Ensures the image respects padding */
-  max-width: 100%; /* Prevents the image from exceeding its container width */
-  height: auto; /* Maintains the aspect ratio */
-  box-sizing: border-box; /* Includes padding in the total width/height */
-}
-.grid-container {
+.zara-grid-container {
   display: grid;
-  width: 400px; /* Fixed width */
-  grid-template-columns: 1fr; /* Single column */
-  gap: 10px; /* Space between items (optional) */
-  margin: 0 auto; /* Centers the grid horizontally */
-  border: 1px solid #ccc; /* Optional: border for visualization */
-}
-.about-text {
-  max-width: 30px;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto;
+  gap: 5%;
 }
 
-.section-cartelas {
-  padding-left: 5 5%;
-}
-.image-cartelas {
-  /* Adjust padding as needed */
-
-  max-width: 50%; /* Prevents the image from exceeding its container width */
-  height: auto; /* Maintains the aspect ratio */
+.zara-top-section {
+  grid-column: 1 / -1; /* This section spans the full width */
 }
 
-.section-zara {
-  background: #ffffff;
-  color: #000000;
-  text-align: left;
-  display: flex;
-  width: auto;
-  text-align: left;
-  margin-top: 2em;
-  padding: 20px 5%;
+.zara-middle-section {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1 / -1; /* Initially, this will span full width */
+  grid-template-columns: 40% 30%; /* Two equal columns in the middle section */
+  gap: 10%; /* Adjust gap between the columns */
+  padding: 1rem;
+  grid-template-rows: auto; /* Height adjusts automatically based on content */
 }
 
-.image-zaraintro {
-  /* Adjust padding as needed */
-  height: 50%;
-  max-width: 60%; /* Prevents the image from exceeding its container width */
-  height: auto; /* Maintains the aspect ratio */
-  box-sizing: border-box; /* Includes padding in the total width/height */
+.zara-bottom-section {
+  grid-column: 1 / -2; /* Full width for bottom section */
 }
 
-.proyectodos {
-  display: flex;
-}
-
-.text-zara {
-  padding-left: 30px;
-  padding-top: 30px;
+.image-introzara {
+  width: 100%;
 }
 
 .image-zarados {
-  height: 25%;
-  padding-left: 18%;
+  width: 100%;
 }
 .gif {
-  height: 80%;
-  padding-right: 40%;
-}
-.gif text {
-  font-size: 12px;
+  width: 100%;
+  background-color: #2e473b;
 }
 .contact {
   margin: 0;
-  height: auto;
-  display: flex;
-  background: #fff;
-  text-align: left;
-  padding-top: 10%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 50% 30%;
+  gap: 0%;
+  grid-template-rows: auto;
+  padding-top: 20%;
+  padding-bottom: 10%;
 }
 .contact-text {
-  font-size: 12px;
-  padding-left: 3%;
+  text-align: left;
+  font-size: x-small;
 }
 .contact-image {
-  height: 70%;
-  padding-left: 5%;
-  padding-bottom: 70%;
+  height: 11em;
 }
-
 /* Pie de página */
 .footer {
-  background: #333;
+  padding: 2em;
+  background: #000000;
   color: #fff;
   text-align: center;
   width: auto;
   text-align: enter;
-  padding: 15px 5%; /* More vertical padding for clarity */
-}
-section {
-  margin: 0; /* Reset default margins */
-  padding: 20px 0; /* Apply consistent spacing */
+  font-size: 0.5em;
 }
