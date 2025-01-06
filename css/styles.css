@@ -92,18 +92,6 @@ header {
   text-align: left; /* Centra el texto */
   font-size: 40px;
 }
-.footer {
-  padding: 1em;
-  margin-top: 15%;
-  background: #000000;
-  color: #ffffff;
-  text-align: center;
-  width: auto;
-  text-align: enter;
-  font-size: 0.8em;
-  font-weight: 100;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 /* Encabezados */
 h1 {
@@ -163,4 +151,17 @@ h5 {
 
 img {
   max-width: 100%;
+}
+
+.footer {
+  padding: 1em;
+  margin-top: 15%;
+  background: #000000;
+  color: #ffffff;
+  text-align: center;
+  width: auto;
+  text-align: enter;
+  font-size: 0.8em;
+  font-weight: 100;
+  font-family: Arial, Helvetica, sans-serif;
 }

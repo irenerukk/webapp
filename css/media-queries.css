@@ -820,7 +820,7 @@ ul {
 
 @media (min-width: 1024px) {
   body {
-    font-size: 1.6rem; /* Increase font size for readability */
+    font-size: 2rem; /* Increase font size for readability */
   }
   .custom-cursor {
     position: sticky;
@@ -846,8 +846,8 @@ ul {
     display: grid;
     justify-items: center;
     justify-content: center;
-    grid-template-columns: 12em 12em 12em 12em;
-    gap: 13%;
+    grid-template-columns: 14em 14em 14em 14em;
+    gap: 20%;
     max-width: 100%;
   }
 
@@ -938,4 +938,85 @@ ul {
     height: 3vw;
     animation: rotate 4s linear infinite;
   }
+  /* About-me grid */
+  .about-me {
+    display: grid;
+    min-height: 60%;
+    font-size: 1em;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .lower-left {
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+    font-size: 1em;
+  }
+
+  .lower-right {
+    display: flex;
+
+    max-width: 75%;
+    padding: 5%;
+  }
+  .profile-image {
+    width: 25em; /* Slightly smaller for mobile screens */
+    align-items: center;
+  }
+  h1 {
+    padding: 5%;
+    justify-content: center;
+    color: #272727; /* Color azul oscuro */
+    font-size: 1.7em;
+    text-align: left;
+    line-height: 1em;
+  }
+  /* Top section */
+  .top-section-explanation {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 12em 1fr; /* Two columns inside the top section */
+    grid-template-rows: auto; /* Height adjusts automatically based on content */
+    gap: 15%; /* Adjusted gap to pixels for consistency */
+  }
+  .concept-eight {
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    padding: 5%;
+  }
+  /* Top section */
+  .top-section-explanation {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 15em 1fr; /* Two columns inside the top section */
+    grid-template-rows: auto; /* Height adjusts automatically based on content */
+    gap: 20%; /* Adjusted gap to pixels for consistency */
+    padding: 2.5rem 1rem; /* Adjusted padding using rem units for better scaling */
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+
+  strong {
+    font-size: 1.5em;
+  }
+  h2 {
+    letter-spacing: 0.0005em;
+    margin: 0;
+    color: #000350;
+    font-size: 1.5em;
+  }
+  .image-tarjeta {
+    height: 50em;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  /* Estilos para ordenadores estándar */
 }

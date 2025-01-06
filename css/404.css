@@ -15,7 +15,17 @@ body {
   align-items: center;
   cursor: none; /* Esconde el cursor estándar */
 }
-
+.parallax {
+  background-image: linear-gradient(
+    135deg,
+    #001f3f,
+    #0074d9
+  ); /* Degradado negro a azul */
+  background-attachment: fixed; /* Parallax effect */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 @keyframes rotate {
   0% {
     transform: rotate(0deg); /* Comienza sin rotación */

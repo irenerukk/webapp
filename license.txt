@@ -1,0 +1,17 @@
+
+This project, [Your Web Project Name], is licensed under the following 
+terms: You are permitted to use, copy, modify, and distribute the code 
+and content of this project, provided proper attribution is given to the 
+original authors and a copy of this license is included with all substantial 
+portions of the project. 
+Use of the project must comply with applicable laws, and it cannot be used for
+illegal, unethical, or commercial purposes without prior approval. The project
+is provided "as is," without warranty of any kind, and the authors disclaim any 
+liability arising from its use. Certain third-party assets, including some images, 
+are the property of their respective authors or copyright 
+holders, and all rights to these assets remain with their original owners. These 
+images are used under their own licensing terms and must not be redistributed or used 
+outside this project without permission. If you modify the project, you must indicate 
+the changes made and clearly differentiate your version from the original. This license will 
+terminate automatically if its terms are violated. For questions or more information, please 
+contact [Your Contact Information].
