@@ -44,8 +44,11 @@ html {
   align-items: center;
 }
 .nav-list a {
-  display: none;
+  color: #000000;
   font-weight: bold;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
   align-items: center;
 }
 /* Ajustes listas y links */
@@ -386,6 +389,7 @@ h4 {
 
 .text-container-zara {
   position: relative;
+  padding: 1%;
   width: 100%; /* Ancho del contenedor */
   letter-spacing: -0.05em;
   overflow: hidden; /* Oculta cualquier parte del texto que salga del contenedor */
