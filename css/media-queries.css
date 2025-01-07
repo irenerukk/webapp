@@ -1380,6 +1380,25 @@ strong {
   a {
     color: #000000;
   }
+  .animated-text {
+    position: absolute;
+    white-space: nowrap; /* Evita que el texto haga saltos de línea */
+    padding: 1% 0; /* Prevents text from touching edges */
+    font-size: 11em; /* Scaled-down size for mobile screens */
+    color: #000000;
+    animation: slideIn 7s linear infinite;
+  }
+  .text-container {
+    position: relative;
+    width: 100%; /* Ancho del contenedor */
+    height: auto;
+    letter-spacing: -0.25em;
+    overflow: hidden; /* Oculta cualquier parte del texto que salga del contenedor */
+    height: 150px; /* Alto del contenedor */
+    background-color: #ffffff; /* Color de fondo opcional */
+    display: flex;
+    align-items: center;
+  }
 }
 
 /* ---------------- */

@@ -1,26 +1,20 @@
 {
-  "name": "web_application",
-  "short_name": "web_app",
-  "description": "A brief description of your web application.",
+  "name": "irenecasenave-portfolio",
+  "short_name": "portfolio",
+  "description": "Se trata de una web retrato donde muestro parte de mis trabajos de branding. El motivo de la elección de trabajos se debe a encaminar mi futuro profesional hacia el mundo del branding. ",
   "start_url": "/index.html",
   "scope": "/",
   "icons": [
     {
-      "src": "/assets/icons/favicon/web-app-manifest-192x192.png",
+      "src": "Assets/icons/pineapple-svgrepo-com.svg",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/assets/icons/favicon/web-app-manifest-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/svg",
+      "purpose": "favicon"
     }
   ],
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
   "display": "standalone",
   "dir": "ltr",
-  "lang": "en"
+  "lang": "es"
 }
