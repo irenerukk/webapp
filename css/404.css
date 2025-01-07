@@ -18,11 +18,10 @@ body {
   grid-template-rows: auto;
 }
 header {
-  height: 100%;
   width: 100%;
   display: grid; /* Activa Flexbox */
   cursor: none; /* Esconde el cursor estándar */
-  padding: 5%;
+  padding: 2%;
   align-items: center;
   justify-content: center;
 }
@@ -31,23 +30,23 @@ header {
   display: grid;
   justify-items: center;
   justify-content: center;
-  grid-template-columns: 7em 6em 6em 6em;
-  grid-template-rows: auto;
-  gap: 2%;
-  max-width: 100%;
+  grid-template-columns: 18em 16em 16em 16em;
+  grid-template-rows: 5em;
+  gap: 8%;
   flex-direction: row;
 }
 .nav-list li {
-  display: grid;
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 .nav-list a {
-  display: block;
+  display: flex;
   color: #ffffff;
   font-weight: bold;
   align-items: center;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 8em;
   align-items: center;
 }
 /* Ajustes listas y links */
@@ -55,6 +54,8 @@ a {
   text-decoration: none;
   color: inherit;
   font-family: Arial, Helvetica, sans-serif;
+  justify-items: center;
+  justify-content: center;
 }
 ul {
   list-style: none;
@@ -69,7 +70,7 @@ ul {
   padding: 1vw 2vw;
   border-radius: 28vw;
   cursor: pointer;
-  font-size: 0.7em;
+  font-size: 1em;
   transition: background-color 0.3s, color 0.3s;
 }
 /* Cambio de color al hacer hover */
@@ -95,12 +96,12 @@ strong {
   color: #ffffff; /* Color azul oscuro */
   text-align: left;
   justify-content: center;
+  font-size: 0.3em;
 }
 
 /* Estilo de enlaces */
 a {
   color: #000000; /* Color azul brillante */
-  font-size: 1.5em;
   text-align: center;
 }
 a:hover {
@@ -112,12 +113,13 @@ a:hover {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  padding: 20%;
+  padding: 10%;
 }
 
 .dust-text {
-  padding: 20%;
-  font-size: 5rem;
+  padding: 5%;
+  font-size: 10rem;
+  line-height: 9rem;
   font-weight: bold;
   color: #ffffff;
   text-transform: uppercase;
@@ -125,6 +127,8 @@ a:hover {
   opacity: 0;
   animation: dust-animation 4s ease-in-out forwards;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 255, 255, 0.4);
+  justify-content: center;
+  align-items: center;
 }
 
 /* Animación de polvo */
@@ -161,23 +165,23 @@ a:hover {
 
 /* go home*/
 .text-container {
-  margin-top: auto; /* Pushes the footer to the bottom */
-  padding-top: 10%;
   position: relative;
   width: 100%; /* Ancho del contenedor */
   overflow: hidden; /* Oculta cualquier parte del texto que salga del contenedor */
-  height: 60px; /* Alto del contenedor */
+  height: 10%; /* Alto del contenedor */
   display: flex;
   align-items: center;
+  margin-top: auto;
+  filter: blur(1px);
 }
 
 .animated-text {
   position: absolute;
   white-space: nowrap; /* Evita que el texto haga saltos de línea */
-  padding: 6% 0; /* Prevents text from touching edges */
-  font-size: 2em; /* Scaled-down size for mobile screens */
+  padding: 1%; /* Prevents text from touching edges */
+  font-size: 3em; /* Scaled-down size for mobile screens */
   color: #ffffff;
-  animation: slideIn 5s linear infinite;
+  animation: slideIn 30s linear infinite;
 }
 
 @keyframes slideIn {
@@ -196,23 +200,19 @@ a:hover {
   animation: slideIn 30s ease-in-out infinite; /* 3 segundos de duración, animación continua */
 }
 
-.img-smily {
+.grid {
   display: flex;
   justify-content: center;
   align-items: center;
-  scale: 60%;
-  filter: blur(2px);
 }
 
 .footer {
-  background: #000000;
-  color: #ffffff;
+  background: #ffffff;
+  color: #000000;
   text-align: center;
-  width: auto;
-  text-align: enter;
-  font-size: 0.8em;
+  font-size: 2em;
   font-weight: 100;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 5%;
-  padding: 10px;
+  width: 100%;
+  padding: 1%;
 }

@@ -83,7 +83,6 @@ ul {
   display: none; /* Hidden initially */
   position: absolute;
   background-color: rgb(0, 0, 0);
-  box-shadow: 0vw 4% 6% rgba(0, 0, 0, 0.2);
   border-radius: 2vw;
   z-index: 1;
   margin-top: 35%;
@@ -197,7 +196,6 @@ ul {
 
 .project-box {
   background: #ffffff;
-  box-shadow: 0 2vw 5vw rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
@@ -342,7 +340,6 @@ strong {
     display: none; /* Hidden initially */
     position: absolute;
     background-color: rgb(0, 0, 0);
-    box-shadow: 0vw 4% 6% rgba(0, 0, 0, 0.2);
     border-radius: 2vw;
     z-index: 1;
     margin-top: 40%;
@@ -492,7 +489,6 @@ strong {
   }
 
   .project-box {
-    box-shadow: 0 2vw 5vw rgba(0, 0, 0, 0.1);
     overflow: hidden;
     display: flex; /* Switch to flexbox for horizontal layout */
     flex-wrap: wrap; /* Allow boxes to wrap onto new rows if necessary */
@@ -605,7 +601,7 @@ strong {
   }
 
   .nav-list a {
-    display: block;
+    display: none;
     color: #191919;
     font-weight: bold;
     align-items: center;
@@ -643,7 +639,6 @@ strong {
     display: none; /* Hidden initially */
     position: absolute;
     background-color: rgb(0, 0, 0);
-    box-shadow: 0vw 4% 6% rgba(0, 0, 0, 0.2);
     border-radius: 2vw;
     z-index: 1;
     margin-top: 30%;
@@ -680,8 +675,8 @@ strong {
 
   /* Rotating images */
   .rotating-image {
-    width: 3vw;
-    height: 3vw;
+    width: 5vw;
+    height: 5vw;
     animation: rotate 4s linear infinite;
   }
 
@@ -792,7 +787,6 @@ strong {
   }
 
   .project-box {
-    box-shadow: 0 2vw 5vw rgba(0, 0, 0, 0.1);
     overflow: hidden;
     display: flex; /* Switch to flexbox for horizontal layout */
     flex-wrap: wrap; /* Allow boxes to wrap onto new rows if necessary */
@@ -943,7 +937,6 @@ strong {
     display: none; /* Hidden initially */
     position: absolute;
     background-color: rgb(0, 0, 0);
-    box-shadow: 0vw 4% 6% rgba(0, 0, 0, 0.2);
     border-radius: 2vw;
     z-index: 1;
     max-width: 10%;
@@ -1093,7 +1086,6 @@ strong {
   }
 
   .project-box {
-    box-shadow: 0 2vw 5vw rgba(0, 0, 0, 0.1);
     overflow: hidden;
     display: flex; /* Switch to flexbox for horizontal layout */
     flex-wrap: wrap; /* Allow boxes to wrap onto new rows if necessary */
@@ -1242,7 +1234,6 @@ strong {
     display: none; /* Hidden initially */
     position: absolute;
     background-color: rgb(0, 0, 0);
-    box-shadow: 0vw 4% 6% rgba(0, 0, 0, 0.2);
     border-radius: 2vw;
     z-index: 1;
     margin-top: 25%;
@@ -1360,6 +1351,37 @@ strong {
     height: 50em;
   }
 }
+
+@media (min-width: 1190px) {
+  .menu-btn {
+    background-color: #191919;
+    color: rgb(254, 254, 254);
+    padding: 1vw 1.5vw;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    border-radius: 12vw;
+    font-size: small;
+  }
+
+  .menu-content {
+    display: none; /* Hidden initially */
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    border-radius: 2vw;
+    margin-top: 24%;
+    max-width: 18%;
+    font-size: 3em;
+  }
+
+  .menu-content a {
+    color: rgb(255, 255, 255);
+  }
+  a {
+    color: #000000;
+  }
+}
+
 /* ---------------- */
 /* Ordenador grande */
 /* ---------------- */
@@ -1444,7 +1466,6 @@ strong {
     display: none; /* Hidden initially */
     position: absolute;
     background-color: rgb(0, 0, 0);
-    box-shadow: 0vw 4% 6% rgba(0, 0, 0, 0.2);
     border-radius: 2vw;
     z-index: 1;
     margin-top: 15%;
@@ -1457,7 +1478,7 @@ strong {
     padding: 3%;
     text-decoration: wavy;
     display: block;
-    max-width: 10%;
+    max-width: 8%;
     font-size: 1em;
   }
 

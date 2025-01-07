@@ -1,0 +1,55 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #c0c0c0;
+
+  /* Custom color palette */
+  --azul: #000350; /* Azul oscuro */
+  --celeste: #83a3d0; /* Celeste */
+  --blanco: #ffffff; /* Blanco */
+  --negro: #000000; /* Negro */
+
+  /* Combinations */
+  .azul {
+    background-color: var(--azul);
+    color: var(--blanco);
+  }
+
+  .celeste {
+    background-color: var(--celeste);
+    color: var(--negro);
+  }
+
+  .blanco {
+    background-color: var(--blanco);
+    color: var(--negro);
+  }
+
+  .negro {
+    background-color: var(--negro);
+    color: var(--blanco);
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1 fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10%;
+  }
+
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 4px;
+    font-size: rem;
+    font-weight: bold;
+  }
+}

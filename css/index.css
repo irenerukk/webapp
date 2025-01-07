@@ -79,7 +79,6 @@ ul {
   display: none; /* Ocultamos el menú inicialmente */
   position: absolute;
   background-color: rgb(0, 0, 0);
-  box-shadow: 0vw 4% 6% rgba(0, 0, 0, 0.2);
   border-radius: 2vw;
   z-index: 1;
   margin-top: 30%;
@@ -269,7 +268,6 @@ ul {
 
 .project-box {
   background: #ffffff;
-  box-shadow: 0 2vw 5vw rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
@@ -330,6 +328,9 @@ ul {
 
 .image-tarjeta {
   height: 16em;
+}
+h1 {
+  margin: 0;
 }
 
 h2 {
@@ -462,6 +463,5 @@ h4 {
   color: #fff;
   text-align: center;
   width: auto;
-  text-align: enter;
   font-size: 0.5em;
 }
